@@ -1,0 +1,29 @@
+name: Build Swift Package
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        swift --version
+        swift build -v
+
+    - name: Test
+      run: |
+        swift test -v --enable-code-coverage
+
+    - name: Generate Code Coverage File
+      run: |
+        xcrun llvm-cov export --instr-profile=.build/x86_64-apple-macosx/debug/codecov/default.profdata .build/x86_64-apple-macosx/debug/ProtocolProxyPackageTests.xctest/Contents/MacOS/ProtocolProxyPackageTests > ./info.lcov
+
+    - name: Upload Code Coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./info.lcov
+        verbose: true

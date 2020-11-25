@@ -1,0 +1,3 @@
+module ProtocolProxy {
+  header "ProtocolProxy.h"
+}

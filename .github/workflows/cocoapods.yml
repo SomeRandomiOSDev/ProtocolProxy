@@ -1,0 +1,18 @@
+name: Cocoapods
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Setup Cocoapods
+      uses: maxim-lobanov/setup-cocoapods@v1
+      with:
+        version: latest
+
+    - name: Lint
+      run: |
+        pod lib lint
