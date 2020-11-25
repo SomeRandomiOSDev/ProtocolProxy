@@ -1,9 +1,11 @@
 name: Build Xcode Project
-on: [pull_request, push]
+on: push
 
 jobs:
-  build:
+  ios:
+    name: iOS
     runs-on: macOS-latest
+
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
@@ -16,25 +18,49 @@ jobs:
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk iphonesimulator -configuration Debug ONLY_ACTIVE_ARCH=YES
 
-    - name: Test iOS Simulator
+    - name: Test
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
-    - name: Build Mac Catalyst
+  maccatalyst:
+    name: Mac Catalyst
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk macosx -configuration Debug ONLY_ACTIVE_ARCH=YES
 
-    - name: Test Mac Catalyst
+    - name: Test
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -destination "platform=macOS" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
-    - name: Build macOS
+  macos:
+    name: macOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug ONLY_ACTIVE_ARCH=YES
 
-    - name: Test macOS
+    - name: Test
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+  tvos:
+    name: tvOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
 
     - name: Build tvOS
       run: |
@@ -44,9 +70,17 @@ jobs:
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -sdk appletvsimulator -configuration Debug ONLY_ACTIVE_ARCH=YES
 
-    - name: Test tvOS Simulator
+    - name: Test
       run: |
         xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -destination "platform=tvOS Simulator,name=Apple TV 4K" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+
+  watchos:
+    name: watchOS
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
 
     - name: Build watchOS
       run: |

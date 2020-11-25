@@ -1,8 +1,9 @@
 name: Cocoapods
-on: [pull_request, push]
+on: push
 
 jobs:
-  build:
+  lint:
+    name: Lint
     runs-on: macOS-latest
     steps:
     - name: Checkout Code
