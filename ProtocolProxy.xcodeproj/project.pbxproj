@@ -100,6 +100,7 @@
 		DDA15DEC25644F580036D007 /* ProtocolProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxy-Info.plist"; path = "Plists/ProtocolProxy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DDA15DED25644F580036D007 /* ProtocolProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxyTests-Info.plist"; path = "Plists/ProtocolProxyTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DDA15DEE25644F680036D007 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+        DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
 		DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF7567C22AA773D002E11D4 /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +315,7 @@
 		DDF756A622AA77C1002E11D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD17A9F9257744BC00D30599 /* scripts */,
 				DDA26DBD256EA4D700E1C6D7 /* workflows */,
 				DDF756A822AA77DE002E11D4 /* ProtocolProxy.podspec */,
 				DDA15DEE25644F680036D007 /* Package.swift */,

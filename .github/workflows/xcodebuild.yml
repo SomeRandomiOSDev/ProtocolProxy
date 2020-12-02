@@ -1,4 +1,4 @@
-name: Build Xcode Project
+name: Xcode Project
 on: push
 
 jobs:
@@ -12,11 +12,11 @@ jobs:
 
     - name: Build iOS
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk iphoneos -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk iphoneos -configuration Debug
 
     - name: Build iOS Simulator
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk iphonesimulator -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk iphonesimulator -configuration Debug
 
     - name: Test
       run: |
@@ -32,7 +32,7 @@ jobs:
 
     - name: Build
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk macosx -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy" -sdk macosx -configuration Debug
 
     - name: Test
       run: |
@@ -48,11 +48,11 @@ jobs:
 
     - name: Build
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug
 
     - name: Test
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy macOS" -configuration Debug test
 
   tvos:
     name: tvOS
@@ -64,11 +64,11 @@ jobs:
 
     - name: Build tvOS
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -sdk appletvos -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -sdk appletvos -configuration Debug
 
     - name: Build tvOS Simulator
       run: |
-        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -sdk appletvsimulator -configuration Debug ONLY_ACTIVE_ARCH=YES
+        xcodebuild -project ProtocolProxy.xcodeproj -scheme "ProtocolProxy tvOS" -sdk appletvsimulator -configuration Debug
 
     - name: Test
       run: |

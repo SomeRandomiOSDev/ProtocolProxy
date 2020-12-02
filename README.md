@@ -6,8 +6,12 @@ Flexible proxy for overriding and observing protocol method/property messages.
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ProtocolProxy.svg)](https://cocoapods.org/pods/ProtocolProxy) 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
 [![Platform](https://img.shields.io/cocoapods/p/ProtocolProxy.svg)](https://cocoapods.org/pods/ProtocolProxy)
-[![Build](https://travis-ci.com/SomeRandomiOSDev/ProtocolProxy.svg?branch=master)](https://travis-ci.com/SomeRandomiOSDev/ProtocolProxy)
 [![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/ProtocolProxy/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/ProtocolProxy)
+
+![Swift Package](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Swift%20Package/badge.svg)
+![Xcode Project](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Xcode%20Project/badge.svg)
+![Cocoapods](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Cocoapods/badge.svg)
+![Carthage](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Carthage/badge.svg)
 
 ## Purpose
 
