@@ -1,4 +1,4 @@
-name: Build Swift Package
+name: Swift Package
 on: push
 
 jobs:

@@ -14,6 +14,10 @@ jobs:
       with:
         version: latest
 
-    - name: Lint
+    - name: Lint (Dynamic Library)
       run: |
         pod lib lint
+
+    - name: Lint (Static Library)
+      run: |
+        pod lib lint --use-libraries
