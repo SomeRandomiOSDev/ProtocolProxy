@@ -3,3 +3,4 @@ ProtocolProxy.xcodeproj/xcuserdata
 
 .build
 .swiftpm
+scripts/build
