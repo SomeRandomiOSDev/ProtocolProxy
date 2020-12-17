@@ -20,7 +20,8 @@ jobs:
 
     - name: Create Zip
       run: |
-        zip -rX ${TMPDIR}/ProtocolProxy.xcframework.zip ${TMPDIR}/ProtocolProxy.xcframework
+        cd ${TMPDIR}
+        zip -rX ProtocolProxy.xcframework.zip ProtocolProxy.xcframework
 
     - name: Upload Zip
       uses: actions/upload-release-asset@v1
@@ -34,7 +35,8 @@ jobs:
 
     - name: Create Tar
       run: |
-        tar -zcvf ${TMPDIR}/ProtocolProxy.xcframework.tar.gz ${TMPDIR}/ProtocolProxy.xcframework
+        cd ${TMPDIR}
+        tar -zcvf ProtocolProxy.xcframework.tar.gz ProtocolProxy.xcframework
 
     - name: Upload Tar
       uses: actions/upload-release-asset@v1
