@@ -7,6 +7,8 @@ jobs:
   build:
     name: Upload Assets
     runs-on: macOS-latest
+    env:
+      TMPDIR: /tmp/.protocolproxy.xcframework.build.${GITHUB_SHA}
 
     steps:
     - name: Checkout Code
@@ -14,11 +16,11 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/xcframework.sh -output ProtocolProxy.xcframework
+        ./scripts/xcframework.sh -output ${TMPDIR}/ProtocolProxy.xcframework
 
     - name: Create Zip
       run: |
-        zip -rX ProtocolProxy.xcframework.zip ProtocolProxy.xcframework
+        zip -rX ${TMPDIR}/ProtocolProxy.xcframework.zip ${TMPDIR}/ProtocolProxy.xcframework
 
     - name: Upload Zip
       uses: actions/upload-release-asset@v1
@@ -26,13 +28,13 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./ProtocolProxy.xcframework.zip
+        asset_path: ${{ env.TMPDIR }}/ProtocolProxy.xcframework.zip
         asset_name: ProtocolProxy.xcframework.zip
         asset_content_type: application/zip
 
     - name: Create Tar
       run: |
-        tar -zcvf ProtocolProxy.xcframework.tar.gz ProtocolProxy.xcframework
+        tar -zcvf ${TMPDIR}/ProtocolProxy.xcframework.tar.gz ${TMPDIR}/ProtocolProxy.xcframework
 
     - name: Upload Tar
       uses: actions/upload-release-asset@v1
@@ -40,6 +42,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./ProtocolProxy.xcframework.tar.gz
+        asset_path: ${{ env.TMPDIR }}/ProtocolProxy.xcframework.tar.gz
         asset_name: ProtocolProxy.xcframework.tar.gz
         asset_content_type: application/gzip

@@ -5,6 +5,8 @@ jobs:
   build:
     name: Build
     runs-on: macOS-latest
+    env:
+      TMPDIR: /tmp/.protocolproxy.xcframework.build.${GITHUB_SHA}
 
     steps:
     - name: Checkout Code
@@ -12,4 +14,4 @@ jobs:
 
     - name: Build
       run: |
-        ./scripts/xcframework.sh
+        ./scripts/xcframework.sh -output ${TMPDIR}/ProtocolProxy.xcframework
