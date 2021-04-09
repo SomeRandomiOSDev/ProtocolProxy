@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		DD2FBC27258BE8BB00DB3211 /* XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */;
+			buildPhases = (
+				DD2FBC33258BE8C600DB3211 /* Build XCFramework */,
+			);
+			dependencies = (
+			);
+			name = XCFramework;
+			productName = XCFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		DD391B012569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
 		DD391B022569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
@@ -81,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		DD391B002569BC8C001C99FA /* ProtocolProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxy.swift; sourceTree = "<group>"; };
 		DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxy.h; sourceTree = "<group>"; };
 		DDA15D8B25644EEE0036D007 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -100,7 +115,6 @@
 		DDA15DEC25644F580036D007 /* ProtocolProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxy-Info.plist"; path = "Plists/ProtocolProxy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DDA15DED25644F580036D007 /* ProtocolProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxyTests-Info.plist"; path = "Plists/ProtocolProxyTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DDA15DEE25644F680036D007 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
-        DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
 		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
 		DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF7567C22AA773D002E11D4 /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -502,8 +516,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1220;
-				ORGANIZATIONNAME = "Some Random iOS Dev";
+				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
+					DD2FBC27258BE8BB00DB3211 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					DDF7567222AA773D002E11D4 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1220;
@@ -554,6 +571,7 @@
 				DDF756CF22AA7841002E11D4 /* ProtocolProxy tvOS */,
 				DDF756D722AA7841002E11D4 /* ProtocolProxy tvOS Tests */,
 				DDF756EB22AA7854002E11D4 /* ProtocolProxy watchOS */,
+				DD2FBC27258BE8BB00DB3211 /* XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -609,6 +627,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD2FBC33258BE8C600DB3211 /* Build XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh -configuration ${CONFIGURATION} -output \"${BUILD_DIR}/${CONFIGURATION}-universal/ProtocolProxy.xcframework\" \n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDF7566F22AA773D002E11D4 /* Sources */ = {
@@ -717,6 +756,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DD2FBC28258BE8BB00DB3211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PH26G7KHX9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD2FBC29258BE8BB00DB3211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PH26G7KHX9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DDF7568522AA773D002E11D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1192,6 +1249,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD2FBC28258BE8BB00DB3211 /* Debug */,
+				DD2FBC29258BE8BB00DB3211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDF7566D22AA773D002E11D4 /* Build configuration list for PBXProject "ProtocolProxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
