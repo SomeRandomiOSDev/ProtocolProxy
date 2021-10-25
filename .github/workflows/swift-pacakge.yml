@@ -1,5 +1,5 @@
 name: Swift Package
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -31,12 +31,12 @@ jobs:
     - name: Generate Code Coverage File
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
-        xcrun llvm-cov export --instr-profile=.build/x86_64-apple-macosx/debug/codecov/default.profdata .build/x86_64-apple-macosx/debug/ProtocolProxyPackageTests.xctest/Contents/MacOS/ProtocolProxyPackageTests > ./info.lcov
+        xcrun llvm-cov export --format=lcov --instr-profile=.build/debug/codecov/default.profdata .build/debug/ProtocolProxyPackageTests.xctest/Contents/MacOS/ProtocolProxyPackageTests > ./codecov.lcov
 
     - name: Upload Code Coverage
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./info.lcov
+        files: ./codecov.lcov
         verbose: true

@@ -1,23 +1,14 @@
 //
 //  ProtocolProxyBasicTests.m
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/3/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
-
-#import <TargetConditionals.h>
-#if !TARGET_OS_WATCH
 
 @import ObjectiveC;
 @import ProtocolProxy;
-@import XCTest;
-
-#if SWIFT_PACKAGE
 @import ProtocolProxyTestsBase;
-#else
-#import "ProtocolProxyTestsBase.h"
-#endif // #if SWIFT_PACKAGE
+@import XCTest;
 
 #pragma mark - ProtocolProxyBasicTests Interface
 
@@ -236,6 +227,8 @@
         XCTAssertThrowsSpecificNamed([(id<NSCoding>)proxy encodeWithCoder:archiver], NSException, NSInvalidArgumentException);
         XCTAssertThrowsSpecificNamed([(id<NSFastEnumeration>)proxy countByEnumeratingWithState:&state objects:&objects count:0], NSException, NSInvalidArgumentException);
     }
+
+    [archiver finishEncoding];
 }
 
 - (void)testBasicForwarding {
@@ -489,7 +482,7 @@
         ProtocolProxy * const proxy = [[ProtocolProxy alloc] initWithProtocol:@protocol(ProtocolProxyPropertiesProtocol) implementer:implementer];
         XCTAssertFalse(proxy.implementer == implementer);
 
-        Ivar const ivar = class_getInstanceVariable(proxy.class, "_implementer");
+        Ivar const ivar = class_getInstanceVariable(proxy.class, "_protocolProxyImplementer");
 
         XCTAssertTrue(ivar != NULL);
         XCTAssertTrue(object_getIvar(proxy, ivar) == implementer);
@@ -498,23 +491,48 @@
         ProtocolProxy * const proxy = [[ProtocolProxy alloc] initWithProtocol:@protocol(ProtocolProxyPropertiesProtocol) implementer:implementer];
         XCTAssertFalse([proxy.adoptedProtocols isEqualToArray:expectedAdoptedProtocols]);
 
-        Ivar const ivar = class_getInstanceVariable(proxy.class, "_adoptedProtocols");
+        Ivar const ivar = class_getInstanceVariable(proxy.class, "_protocolProxyAdoptedProtocols");
 
         XCTAssertTrue(ivar != NULL);
         XCTAssertTrue([expectedAdoptedProtocols isEqualToArray:(NSArray *)object_getIvar(proxy, ivar)]);
     }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wvoid-pointer-to-int-cast"
     { // `respondsToSelectorsWithObservers` is still accessible via ivar lookup
         ProtocolProxy * const proxy = [[ProtocolProxy alloc] initWithProtocol:@protocol(ProtocolProxyPropertiesProtocol) implementer:implementer];
 
-        Ivar const ivar = class_getInstanceVariable(proxy.class, "_respondsToSelectorsWithObservers");
+        Ivar const ivar = class_getInstanceVariable(proxy.class, "_protocolProxyRespondsToSelectorsWithObservers");
         XCTAssertTrue(ivar != NULL);
 
         implementer.respondsToSelectorsWithObservers = YES;
-        XCTAssertFalse(((NSNumber *)object_getIvar(proxy, ivar)).boolValue);
+        XCTAssertFalse((BOOL)(__bridge void *)object_getIvar(proxy, ivar));
 
         object_setIvar(proxy, ivar, (__bridge id)(void *)YES);
         implementer.respondsToSelectorsWithObservers = NO;
         XCTAssertTrue((BOOL)(__bridge void *)object_getIvar(proxy, ivar));
+
+        //
+
+        XCTAssertFalse(implementer.respondsToSelectorsWithObservers);
+        XCTAssertFalse([proxy respondsToSelector:@selector(dontActuallyImplementThis)]); // Implementer doesn't respond and we don't have any observers
+
+        XCTAssertTrue([proxy addObserver:self forSelector:@selector(dontActuallyImplementThis) beforeObservedSelector:YES]);
+        XCTAssertTrue([proxy respondsToSelector:@selector(dontActuallyImplementThis)]); // `respondsToSelectorsWithObservers` was set to YES via ivar lookup and we have an observer
+    }
+#pragma clang diagnostic pop
+    { // `respondsToSelectorsWithObservers` is still accessible via ivar offset
+        ProtocolProxy * const proxy = [[ProtocolProxy alloc] initWithProtocol:@protocol(ProtocolProxyPropertiesProtocol) implementer:implementer];
+
+        Ivar const ivar = class_getInstanceVariable(proxy.class, "_protocolProxyRespondsToSelectorsWithObservers");
+        const ptrdiff_t offset = ivar_getOffset(ivar);
+        XCTAssertTrue(ivar != NULL);
+
+        implementer.respondsToSelectorsWithObservers = YES;
+        XCTAssertFalse(*(BOOL *)((uint8_t *)(__bridge void *)proxy + offset));
+
+        *(BOOL *)((uint8_t *)(__bridge void *)proxy + offset) = YES;
+        implementer.respondsToSelectorsWithObservers = NO;
+        XCTAssertTrue(*(BOOL *)((uint8_t *)(__bridge void *)proxy + offset));
 
         //
 
@@ -649,5 +667,3 @@
 }
 
 @end
-
-#endif // #if !TARGET_OS_WATCH

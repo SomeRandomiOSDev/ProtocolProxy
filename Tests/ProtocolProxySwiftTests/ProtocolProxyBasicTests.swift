@@ -1,12 +1,10 @@
 //
 //  ProtocolProxyBasicTests.swift
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/11/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 import ProtocolProxy
 import ProtocolProxyTestsBase
 import XCTest
@@ -34,7 +32,7 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             }
 
             for `protocol` in allProtocols {
-                XCTAssertEqual(proxy.adoptedProtocols.contains(where: { protocol_isEqual($0, `protocol`) }), proxy.conforms(to: `protocol`), "Failure when comparing protocol conformances: [\(namesForProtocols(protocols).joined(separator: ", "))]")
+                XCTAssertEqual(proxy.adoptedProtocols.contains { protocol_isEqual($0, `protocol`) }, proxy.conforms(to: `protocol`), "Failure when comparing protocol conformances: [\(namesForProtocols(protocols).joined(separator: ", "))]")
             }
         }
 
@@ -85,7 +83,7 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
         }
     }
 
-    func testRespondsToSelector() {
+    func testRespondsToSelector() throws {
         let allProtocols: [Protocol] = [BasicTestProtocol.self, NSCopying.self, NSMutableCopying.self, NSCoding.self, NSFastEnumeration.self]
         let allSelectors: [String: Selector] = [
             String(cString: protocol_getName(BasicTestProtocol.self)): #selector(BasicTestProtocol.foobar),
@@ -95,7 +93,7 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             String(cString: protocol_getName(NSFastEnumeration.self)): #selector(NSFastEnumeration.countByEnumerating(with:objects:count:))
         ]
 
-        self.iterateAllPermutations(of: allProtocols) { protocols in
+        try iterateAllPermutations(of: allProtocols) { protocols in
             let proxy: ProtocolProxy
 
             if protocols.count == 1 {
@@ -106,9 +104,9 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
 
             for `protocol` in allProtocols {
                 let protocolName = String(cString: protocol_getName(`protocol`))
-                let selector = allSelectors[protocolName]!
+                let selector = try XCTUnwrap(allSelectors[protocolName])
 
-                XCTAssertEqual(proxy.adoptedProtocols.contains(where: { protocol_isEqual($0, `protocol`) }), proxy.responds(to: selector), "Failure when checking response to selector: \(NSStringFromSelector(selector)) | [\(namesForProtocols(protocols).joined(separator: ", "))]")
+                XCTAssertEqual(proxy.adoptedProtocols.contains { protocol_isEqual($0, `protocol`) }, proxy.responds(to: selector), "Failure when checking response to selector: \(NSStringFromSelector(selector)) | [\(namesForProtocols(protocols).joined(separator: ", "))]")
             }
         }
 
@@ -165,33 +163,34 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             XCTAssertTrue(proxy.addObserver(observer, for: #selector(BasicTestProtocol.maybeFoobar), beforeObservedSelector: false))
             XCTAssertTrue(proxy.responds(to: #selector(BasicTestProtocol.maybeFoobar)))
         }
-        do {
-            // Selectors declared on the public interface of ProtocolProxy
-            let declaredSelectors = [
-                #selector(getter: ProtocolProxy.implementer),
-                #selector(getter: ProtocolProxy.adoptedProtocols),
-                #selector(getter: ProtocolProxy.respondsToSelectorsWithObservers),
-                #selector(setter: ProtocolProxy.respondsToSelectorsWithObservers),
+    }
 
-                #selector(ProtocolProxy.init(protocol:implementer:)),
-                #selector(ProtocolProxy.init(protocol:stronglyRetainedImplementer:)),
-                #selector(ProtocolProxy.init(protocols:implementer:)),
-                #selector(ProtocolProxy.init(protocols:stronglyRetainedImplementer:)),
+    func testRespondsToSelectors() throws {
+        // Selectors declared on the public interface of ProtocolProxy
+        let declaredSelectors = [
+            #selector(getter: ProtocolProxy.implementer),
+            #selector(getter: ProtocolProxy.adoptedProtocols),
+            #selector(getter: ProtocolProxy.respondsToSelectorsWithObservers),
+            #selector(setter: ProtocolProxy.respondsToSelectorsWithObservers),
 
-                "overrideSelector:withTarget:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
-                "overrideSelector:withTarget:targetSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
-                #selector(ProtocolProxy.override(_:using:)),
+            #selector(ProtocolProxy.init(protocol:implementer:)),
+            #selector(ProtocolProxy.init(protocol:stronglyRetainedImplementer:)),
+            #selector(ProtocolProxy.init(protocols:implementer:)),
+            #selector(ProtocolProxy.init(protocols:stronglyRetainedImplementer:)),
 
-                "addObserver:forSelector:beforeObservedSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
-                "addObserver:forSelector:beforeObservedSelector:observerSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
-                #selector(ProtocolProxy.addObserver(for:beforeObservedSelector:using:))
-            ]
+            "overrideSelector:withTarget:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
+            "overrideSelector:withTarget:targetSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
+            #selector(ProtocolProxy.override(_:using:)),
 
-            let proxy = ProtocolProxy(protocol: NSObjectProtocol.self, implementer: nil)
+            "addObserver:forSelector:beforeObservedSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
+            "addObserver:forSelector:beforeObservedSelector:observerSelector:".withCString { sel_registerName($0) }, // NS_REFINED_FOR_SWIFT
+            #selector(ProtocolProxy.addObserver(for:beforeObservedSelector:using:))
+        ]
 
-            for selector in declaredSelectors {
-                XCTAssertTrue(proxy.responds(to: selector), "Expected ProtocolProxy to respond to `-\(String(cString: sel_getName(selector)))`");
-            }
+        let proxy = ProtocolProxy(protocol: NSObjectProtocol.self, implementer: nil)
+
+        for selector in declaredSelectors {
+            XCTAssertTrue(proxy.responds(to: selector), "Expected ProtocolProxy to respond to `-\(String(cString: sel_getName(selector)))`")
         }
     }
 
@@ -215,8 +214,8 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             XCTAssertEqual(delegate.foobarCount, 2)
             XCTAssertEqual(delegate.maybeFoobarCount, 0)
 
-            let proxy = ProtocolProxy(protocol: BasicTestProtocol.self, implementer: delegate);
-            test.delegate = (proxy as! BasicTestProtocol)
+            let proxy = ProtocolProxy(protocol: BasicTestProtocol.self, implementer: delegate)
+            test.delegate = (proxy as? BasicTestProtocol)
 
             test.foobar()
             test.maybeFoobar()
@@ -246,8 +245,8 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             XCTAssertEqual(delegate.foobarCount, 2)
             XCTAssertEqual(delegate.maybeFoobarCount, 2)
 
-            let proxy = ProtocolProxy(protocol: BasicTestProtocol.self, implementer: delegate);
-            test.delegate = (proxy as! BasicTestProtocol)
+            let proxy = ProtocolProxy(protocol: BasicTestProtocol.self, implementer: delegate)
+            test.delegate = (proxy as? BasicTestProtocol)
 
             test.foobar()
             test.maybeFoobar()
@@ -262,8 +261,8 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
     }
 
     func testImplementerIsntLeaked() {
-        var proxy: ProtocolProxy? = nil
-        weak var weakImplementer: AnyObject? = nil
+        var proxy: ProtocolProxy?
+        weak var weakImplementer: AnyObject?
 
         autoreleasepool {
             var implementer: AnyObject? = NSObject()
@@ -306,8 +305,8 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
 
             let adoptedProtocols = proxy?.adoptedProtocols
             XCTAssertEqual(adoptedProtocols?.count, 2)
-            XCTAssertEqual(adoptedProtocols?.contains(where: { protocol_isEqual($0, BasicTestProtocol.self) }), true)
-            XCTAssertEqual(adoptedProtocols?.contains(where: { protocol_isEqual($0, NSObjectProtocol.self) }), true)
+            XCTAssertEqual(adoptedProtocols?.contains { protocol_isEqual($0, BasicTestProtocol.self) }, true)
+            XCTAssertEqual(adoptedProtocols?.contains { protocol_isEqual($0, NSObjectProtocol.self) }, true)
         }
         do {
             proxy = ProtocolProxy(protocol: BasicTestProtocol.self, implementer: implementer)
@@ -315,8 +314,8 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
 
             let adoptedProtocols = proxy?.adoptedProtocols
             XCTAssertEqual(adoptedProtocols?.count, 2)
-            XCTAssertEqual(adoptedProtocols?.contains(where: { protocol_isEqual($0, BasicTestProtocol.self) }), true)
-            XCTAssertEqual(adoptedProtocols?.contains(where: { protocol_isEqual($0, NSObjectProtocol.self) }), true)
+            XCTAssertEqual(adoptedProtocols?.contains { protocol_isEqual($0, BasicTestProtocol.self) }, true)
+            XCTAssertEqual(adoptedProtocols?.contains { protocol_isEqual($0, NSObjectProtocol.self) }, true)
         }
 
         //
@@ -412,10 +411,10 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
             XCTAssertFalse(proxy.implementer === implementer)
             XCTAssertEqual(implementer.foobarCount, 0)
 
-            (proxy as! ProtocolProxyPropertiesProtocol).foobar()
+            (proxy as? ProtocolProxyPropertiesProtocol)?.foobar()
             XCTAssertEqual(implementer.foobarCount, 1)
 
-            (proxy as! ProtocolProxyPropertiesProtocol).foobar()
+            (proxy as? ProtocolProxyPropertiesProtocol)?.foobar()
             XCTAssertEqual(implementer.foobarCount, 2)
         }
         do { // Setting `proxy.respondsToSelectorsWithObservers` when overridden by an adopted protocol has no affect
@@ -514,9 +513,9 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
 
     // MARK: Private Methods
 
-    private func iterateAllPermutations<Element>(of elements: [Element], using block: ([Element]) -> Void) {
-        var iterate: (([Element]) -> NSOrderedSet)! = nil
-        let _iterate: ([Element]) -> NSOrderedSet = { elements in
+    private func iterateAllPermutations<Element>(of elements: [Element], using block: ([Element]) throws -> Void) rethrows {
+        var iterate: (([Element]) -> NSOrderedSet)?
+        let iterator: ([Element]) -> NSOrderedSet = { elements in
             let set = NSMutableOrderedSet()
             set.add(elements)
 
@@ -525,16 +524,16 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
                     var subelements = elements
                     subelements.remove(at: i)
 
-                    set.union(iterate(subelements))
+                    set.union(iterate?(subelements) ?? NSOrderedSet())
                 }
             }
 
             return set
         }
 
-        iterate = _iterate
-        for permutation in iterate(elements).array {
-            block(permutation as! [Element])
+        iterate = iterator
+        for permutation in (iterate?(elements).array ?? []) {
+            try block((permutation as? [Element]) ?? [])
         }
     }
 
@@ -546,4 +545,3 @@ class ProtocolProxySwiftBasicTests: XCTestCase {
         return String(string[string.startIndex]).uppercased() + String(string[string.index(after: string.startIndex)...])
     }
 }
-#endif // #if !os(watchOS)

@@ -1,22 +1,13 @@
 //
 //  ProtocolProxyOverrideTests.m
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/12/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
-
-#import <TargetConditionals.h>
-#if !TARGET_OS_WATCH
 
 @import ProtocolProxy;
-@import XCTest;
-
-#if SWIFT_PACKAGE
 @import ProtocolProxyTestsBase;
-#else
-#import "ProtocolProxyTestsBase.h"
-#endif // #if SWIFT_PACKAGE
+@import XCTest;
 
 #pragma mark - ProtocolProxyOverrideTests Interface
 
@@ -652,5 +643,3 @@
 }
 
 @end
-
-#endif // #if !TARGET_OS_WATCH

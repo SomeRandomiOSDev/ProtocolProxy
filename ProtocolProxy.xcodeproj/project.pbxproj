@@ -18,163 +18,233 @@
 			name = XCFramework;
 			productName = XCFramework;
 		};
+		DD86D56423D11C4B0046E63E /* Run SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD86D56523D11C4B0046E63E /* Build configuration list for PBXAggregateTarget "Run SwiftLint" */;
+			buildPhases = (
+				DD86D56823D11C550046E63E /* Run SwiftLint */,
+			);
+			dependencies = (
+			);
+			name = "Run SwiftLint";
+			productName = "Run SwiftLint";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		DD391B012569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
-		DD391B022569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
-		DD391B032569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
-		DD391B042569BC8C001C99FA /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD391B002569BC8C001C99FA /* ProtocolProxy.swift */; };
-		DDA15D9025644EEE0036D007 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA15D9125644EEE0036D007 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA15D9225644EEE0036D007 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA15D9325644EEE0036D007 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA15D9425644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */; };
-		DDA15D9525644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */; };
-		DDA15D9625644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */; };
-		DDA15D9725644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */; };
-		DDA15D9825644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */; };
-		DDA15D9925644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */; };
-		DDA15D9A25644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */; };
-		DDA15D9B25644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */; };
-		DDA15D9C25644EEE0036D007 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */; };
-		DDA15D9D25644EEE0036D007 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */; };
-		DDA15D9E25644EEE0036D007 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */; };
-		DDA15D9F25644EEE0036D007 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */; };
-		DDA15DB725644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DA925644F120036D007 /* ProtocolProxyOverrideTests.m */; };
-		DDA15DB825644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DA925644F120036D007 /* ProtocolProxyOverrideTests.m */; };
-		DDA15DB925644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DA925644F120036D007 /* ProtocolProxyOverrideTests.m */; };
-		DDA15DBA25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAA25644F120036D007 /* ProtocolProxyObserverTests.m */; };
-		DDA15DBB25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAA25644F120036D007 /* ProtocolProxyObserverTests.m */; };
-		DDA15DBC25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAA25644F120036D007 /* ProtocolProxyObserverTests.m */; };
-		DDA15DBD25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAB25644F120036D007 /* ProtocolProxyBasicTests.m */; };
-		DDA15DBE25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAB25644F120036D007 /* ProtocolProxyBasicTests.m */; };
-		DDA15DBF25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAB25644F120036D007 /* ProtocolProxyBasicTests.m */; };
-		DDA15DC025644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAD25644F120036D007 /* ProtocolProxyBasicTests.swift */; };
-		DDA15DC125644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAD25644F120036D007 /* ProtocolProxyBasicTests.swift */; };
-		DDA15DC225644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAD25644F120036D007 /* ProtocolProxyBasicTests.swift */; };
-		DDA15DC325644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAE25644F120036D007 /* ProtocolProxyTestsBase.swift */; };
-		DDA15DC425644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAE25644F120036D007 /* ProtocolProxyTestsBase.swift */; };
-		DDA15DC525644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAE25644F120036D007 /* ProtocolProxyTestsBase.swift */; };
-		DDA15DC625644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAF25644F120036D007 /* ProtocolProxyObserverTests.swift */; };
-		DDA15DC725644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAF25644F120036D007 /* ProtocolProxyObserverTests.swift */; };
-		DDA15DC825644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DAF25644F120036D007 /* ProtocolProxyObserverTests.swift */; };
-		DDA15DC925644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB025644F120036D007 /* ProtocolProxyOverrideTests.swift */; };
-		DDA15DCA25644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB025644F120036D007 /* ProtocolProxyOverrideTests.swift */; };
-		DDA15DCB25644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB025644F120036D007 /* ProtocolProxyOverrideTests.swift */; };
-		DDA15DCC25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB625644F120036D007 /* ProtocolProxyTestsBase.m */; };
-		DDA15DCD25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB625644F120036D007 /* ProtocolProxyTestsBase.m */; };
-		DDA15DCE25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA15DB625644F120036D007 /* ProtocolProxyTestsBase.m */; };
-		DDF7567D22AA773D002E11D4 /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */; };
-		DDF756BD22AA782D002E11D4 /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF756B422AA782D002E11D4 /* ProtocolProxy.framework */; };
-		DDF756D922AA7841002E11D4 /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF756D022AA7841002E11D4 /* ProtocolProxy.framework */; };
+		DD48BC98270E0DE800D842BC /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D5C423D11D140046E63E /* ProtocolProxy.framework */; };
+		DD7E91A52722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
+		DD7E91A62722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
+		DD7E91A72722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
+		DD7E91A82722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
+		DD7E91A92722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
+		DD7E91AA2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
+		DD7E91AB2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
+		DD7E91AC2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
+		DD7E91AD2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
+		DD7E91AE2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
+		DD7E91AF2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
+		DD7E91B02722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
+		DD7E91B12722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
+		DD7E91B22722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
+		DD7E91B32722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
+		DD7E91B42722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
+		DD7E91B52722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
+		DD7E91B62722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
+		DD7E91B72722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
+		DD7E91B82722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
+		DD7E91B92722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
+		DD7E91BA2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
+		DD7E91BB2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
+		DD7E91BC2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
+		DD7E91BD2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
+		DD7E91BE2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
+		DD7E91BF2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
+		DD7E91C02722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
+		DD7E91C12722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
+		DD7E91C22722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
+		DD7E91C32722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
+		DD7E91C42722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
+		DD7E91CF2722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7E91D02722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7E91D12722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7E91D22722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD7E91D32722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
+		DD7E91D42722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
+		DD7E91D52722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
+		DD7E91D62722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
+		DD7E91D72722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
+		DD7E91D82722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
+		DD7E91D92722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
+		DD7E91DA2722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
+		DD7E91DB2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
+		DD7E91DC2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
+		DD7E91DD2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
+		DD7E91DE2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
+		DD7E91DF2722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
+		DD7E91E02722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
+		DD7E91E12722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
+		DD7E91E22722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
+		DD86D54723D11B3E0046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */; };
+		DD86D57923D11C860046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* ProtocolProxy.framework */; };
+		DD86D59523D11CA00046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DDF7567E22AA773D002E11D4 /* PBXContainerItemProxy */ = {
+		DD48BC99270E0DE800D842BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF7567222AA773D002E11D4;
+			remoteGlobalIDString = DD86D5C323D11D140046E63E;
+			remoteInfo = "ProtocolProxy watchOS";
+		};
+		DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D53C23D11B3E0046E63E;
 			remoteInfo = ProtocolProxy;
 		};
-		DDF756BE22AA782D002E11D4 /* PBXContainerItemProxy */ = {
+		DD86D56923D11C6C0046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF756B322AA782D002E11D4;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D57A23D11C860046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56F23D11C860046E63E;
 			remoteInfo = "ProtocolProxy macOS";
 		};
-		DDF756DA22AA7841002E11D4 /* PBXContainerItemProxy */ = {
+		DD86D59623D11CA00046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DDF7566A22AA773D002E11D4 /* Project object */;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DDF756CF22AA7841002E11D4;
+			remoteGlobalIDString = DD86D58B23D11CA00046E63E;
 			remoteInfo = "ProtocolProxy tvOS";
+		};
+		DD86D5D823D11DC60046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D5DA23D11DC90046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D5DC23D11DCC0046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
-		DD391B002569BC8C001C99FA /* ProtocolProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxy.swift; sourceTree = "<group>"; };
-		DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxy.h; sourceTree = "<group>"; };
-		DDA15D8B25644EEE0036D007 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProtocolProxy+Internal.h"; sourceTree = "<group>"; };
-		DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProtocolProxy+Internal.m"; sourceTree = "<group>"; };
-		DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxy.m; sourceTree = "<group>"; };
-		DDA15DA925644F120036D007 /* ProtocolProxyOverrideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyOverrideTests.m; sourceTree = "<group>"; };
-		DDA15DAA25644F120036D007 /* ProtocolProxyObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyObserverTests.m; sourceTree = "<group>"; };
-		DDA15DAB25644F120036D007 /* ProtocolProxyBasicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyBasicTests.m; sourceTree = "<group>"; };
-		DDA15DAD25644F120036D007 /* ProtocolProxyBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyBasicTests.swift; sourceTree = "<group>"; };
-		DDA15DAE25644F120036D007 /* ProtocolProxyTestsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyTestsBase.swift; sourceTree = "<group>"; };
-		DDA15DAF25644F120036D007 /* ProtocolProxyObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyObserverTests.swift; sourceTree = "<group>"; };
-		DDA15DB025644F120036D007 /* ProtocolProxyOverrideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyOverrideTests.swift; sourceTree = "<group>"; };
-		DDA15DB325644F120036D007 /* ProtocolProxyTestsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxyTestsBase.h; sourceTree = "<group>"; };
-		DDA15DB425644F120036D007 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		DDA15DB625644F120036D007 /* ProtocolProxyTestsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyTestsBase.m; sourceTree = "<group>"; };
-		DDA15DEC25644F580036D007 /* ProtocolProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxy-Info.plist"; path = "Plists/ProtocolProxy-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DDA15DED25644F580036D007 /* ProtocolProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "ProtocolProxyTests-Info.plist"; path = "Plists/ProtocolProxyTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DDA15DEE25644F680036D007 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+		DD48BC94270E0DE800D842BC /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD48BC9F270E0F4500D842BC /* ProtocolProxyTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProtocolProxyTests.xctestplan; sourceTree = "<group>"; };
+		DD48BCA0270E0F9A00D842BC /* ProtocolProxy macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy macOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BCA1270E0FE200D842BC /* ProtocolProxy tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy tvOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BCA2270E101D00D842BC /* ProtocolProxy watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy watchOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD5D044A261FA56400BA0FC2 /* ProtocolProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProtocolProxyTests-Info.plist"; path = "Plists/ProtocolProxyTests-Info.plist"; sourceTree = "<group>"; };
+		DD7E91982722ED120092BB79 /* ProtocolProxyTestsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxyTestsBase.h; sourceTree = "<group>"; };
+		DD7E91992722ED120092BB79 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyTestsBase.m; sourceTree = "<group>"; };
+		DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyBasicTests.swift; sourceTree = "<group>"; };
+		DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyTestsBase.swift; sourceTree = "<group>"; };
+		DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyObserverTests.swift; sourceTree = "<group>"; };
+		DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyOverrideTests.swift; sourceTree = "<group>"; };
+		DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyOverrideTests.m; sourceTree = "<group>"; };
+		DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyObserverTests.m; sourceTree = "<group>"; };
+		DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyBasicTests.m; sourceTree = "<group>"; };
+		DD7E91C72722ED200092BB79 /* ProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxy.h; sourceTree = "<group>"; };
+		DD7E91C82722ED200092BB79 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProtocolProxy+Internal.h"; sourceTree = "<group>"; };
+		DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProtocolProxy+Internal.m"; sourceTree = "<group>"; };
+		DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxy.m; sourceTree = "<group>"; };
+		DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxy.swift; sourceTree = "<group>"; };
+		DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D54123D11B3E0046E63E /* ProtocolProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProtocolProxy-Info.plist"; path = "Plists/ProtocolProxy-Info.plist"; sourceTree = "<group>"; };
+		DD86D54623D11B3E0046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57023D11C860046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57823D11C860046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D59423D11CA00046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5C423D11D140046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		DD86D5DF23D22DB90046E63E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+		DD86D5E023D22DB90046E63E /* ProtocolProxy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ProtocolProxy.podspec; sourceTree = SOURCE_ROOT; };
+		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DD86D5E323D22DC30046E63E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
-		DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF7567C22AA773D002E11D4 /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756A722AA77DE002E11D4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		DDF756A822AA77DE002E11D4 /* ProtocolProxy.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProtocolProxy.podspec; sourceTree = SOURCE_ROOT; };
-		DDF756A922AA77DE002E11D4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		DDF756B422AA782D002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756BC22AA782D002E11D4 /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756D022AA7841002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756D822AA7841002E11D4 /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF756EC22AA7854002E11D4 /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB1DE5C2405EEE300C20FED /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DDF7567022AA773D002E11D4 /* Frameworks */ = {
+		DD48BC91270E0DE800D842BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD48BC98270E0DE800D842BC /* ProtocolProxy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D53A23D11B3E0046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567922AA773D002E11D4 /* Frameworks */ = {
+		DD86D54323D11B3E0046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF7567D22AA773D002E11D4 /* ProtocolProxy.framework in Frameworks */,
+				DD86D54723D11B3E0046E63E /* ProtocolProxy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B122AA782D002E11D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF756B922AA782D002E11D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF756BD22AA782D002E11D4 /* ProtocolProxy.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF756CD22AA7841002E11D4 /* Frameworks */ = {
+		DD86D56D23D11C860046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D522AA7841002E11D4 /* Frameworks */ = {
+		DD86D57523D11C860046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF756D922AA7841002E11D4 /* ProtocolProxy.framework in Frameworks */,
+				DD86D57923D11C860046E63E /* ProtocolProxy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E922AA7854002E11D4 /* Frameworks */ = {
+		DD86D58923D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D59123D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD86D59523D11CA00046E63E /* ProtocolProxy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C123D11D140046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,374 +254,413 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD391AFF2569BC8C001C99FA /* ProtocolProxySwift */ = {
+		DD48BC9E270E0F1300D842BC /* Test Plans */ = {
 			isa = PBXGroup;
 			children = (
-				DD391B002569BC8C001C99FA /* ProtocolProxy.swift */,
+				DD48BC9F270E0F4500D842BC /* ProtocolProxyTests.xctestplan */,
+				DD48BCA0270E0F9A00D842BC /* ProtocolProxy macOS Tests.xctestplan */,
+				DD48BCA1270E0FE200D842BC /* ProtocolProxy tvOS Tests.xctestplan */,
+				DD48BCA2270E101D00D842BC /* ProtocolProxy watchOS Tests.xctestplan */,
 			);
-			path = ProtocolProxySwift;
+			path = "Test Plans";
 			sourceTree = "<group>";
 		};
-		DDA15D6325644EDB0036D007 /* ProtocolProxy */ = {
+		DD7E91962722ED120092BB79 /* ProtocolProxyTestsBase */ = {
 			isa = PBXGroup;
 			children = (
-				DDA15D8925644EEE0036D007 /* include */,
-				DDA15D8C25644EEE0036D007 /* src */,
-			);
-			path = ProtocolProxy;
-			sourceTree = "<group>";
-		};
-		DDA15D8925644EEE0036D007 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15D8A25644EEE0036D007 /* ProtocolProxy.h */,
-				DDA15D8B25644EEE0036D007 /* module.modulemap */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		DDA15D8C25644EEE0036D007 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15DDD25644F2D0036D007 /* internal */,
-				DDA15D8F25644EEE0036D007 /* ProtocolProxy.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		DDA15DA725644F120036D007 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15DA825644F120036D007 /* ProtocolProxyObjCTests */,
-				DDA15DAC25644F120036D007 /* ProtocolProxySwiftTests */,
-				DDA15DB125644F120036D007 /* ProtocolProxyTestsBase */,
-			);
-			path = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		DDA15DA825644F120036D007 /* ProtocolProxyObjCTests */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15DAB25644F120036D007 /* ProtocolProxyBasicTests.m */,
-				DDA15DAA25644F120036D007 /* ProtocolProxyObserverTests.m */,
-				DDA15DA925644F120036D007 /* ProtocolProxyOverrideTests.m */,
-			);
-			path = ProtocolProxyObjCTests;
-			sourceTree = "<group>";
-		};
-		DDA15DAC25644F120036D007 /* ProtocolProxySwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15DAD25644F120036D007 /* ProtocolProxyBasicTests.swift */,
-				DDA15DAF25644F120036D007 /* ProtocolProxyObserverTests.swift */,
-				DDA15DB025644F120036D007 /* ProtocolProxyOverrideTests.swift */,
-				DDA15DAE25644F120036D007 /* ProtocolProxyTestsBase.swift */,
-			);
-			path = ProtocolProxySwiftTests;
-			sourceTree = "<group>";
-		};
-		DDA15DB125644F120036D007 /* ProtocolProxyTestsBase */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15DB225644F120036D007 /* include */,
-				DDA15DB525644F120036D007 /* src */,
+				DD7E91972722ED120092BB79 /* include */,
+				DD7E919A2722ED120092BB79 /* src */,
 			);
 			path = ProtocolProxyTestsBase;
 			sourceTree = "<group>";
 		};
-		DDA15DB225644F120036D007 /* include */ = {
+		DD7E91972722ED120092BB79 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				DDA15DB325644F120036D007 /* ProtocolProxyTestsBase.h */,
-				DDA15DB425644F120036D007 /* module.modulemap */,
+				DD7E91982722ED120092BB79 /* ProtocolProxyTestsBase.h */,
+				DD7E91992722ED120092BB79 /* module.modulemap */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		DDA15DB525644F120036D007 /* src */ = {
+		DD7E919A2722ED120092BB79 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				DDA15DB625644F120036D007 /* ProtocolProxyTestsBase.m */,
+				DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		DDA15DDD25644F2D0036D007 /* internal */ = {
+		DD7E919C2722ED120092BB79 /* ProtocolProxySwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				DDA15D8D25644EEE0036D007 /* ProtocolProxy+Internal.h */,
-				DDA15D8E25644EEE0036D007 /* ProtocolProxy+Internal.m */,
+				DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */,
+				DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */,
+				DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */,
+				DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */,
 			);
-			name = internal;
+			path = ProtocolProxySwiftTests;
 			sourceTree = "<group>";
 		};
-		DDF7566922AA773D002E11D4 = {
+		DD7E91A12722ED120092BB79 /* ProtocolProxyObjCTests */ = {
 			isa = PBXGroup;
 			children = (
-				DDF7567522AA773D002E11D4 /* ProtocolProxy */,
-				DDF7567422AA773D002E11D4 /* Products */,
+				DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */,
+				DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */,
+				DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */,
+			);
+			path = ProtocolProxyObjCTests;
+			sourceTree = "<group>";
+		};
+		DD7E91C52722ED200092BB79 /* ProtocolProxy */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91C62722ED200092BB79 /* include */,
+				DD7E91C92722ED200092BB79 /* src */,
+			);
+			path = ProtocolProxy;
+			sourceTree = "<group>";
+		};
+		DD7E91C62722ED200092BB79 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91C72722ED200092BB79 /* ProtocolProxy.h */,
+				DD7E91C82722ED200092BB79 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DD7E91C92722ED200092BB79 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */,
+				DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */,
+				DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DD7E91CD2722ED200092BB79 /* ProtocolProxySwift */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */,
+			);
+			path = ProtocolProxySwift;
+			sourceTree = "<group>";
+		};
+		DD86D53323D11B3E0046E63E = {
+			isa = PBXGroup;
+			children = (
+				DD86D53F23D11B3E0046E63E /* ProtocolProxy */,
+				DD86D53E23D11B3E0046E63E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DDF7567422AA773D002E11D4 /* Products */ = {
+		DD86D53E23D11B3E0046E63E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */,
-				DDF7567C22AA773D002E11D4 /* ProtocolProxyTests.xctest */,
-				DDF756B422AA782D002E11D4 /* ProtocolProxy.framework */,
-				DDF756BC22AA782D002E11D4 /* ProtocolProxyTests.xctest */,
-				DDF756D022AA7841002E11D4 /* ProtocolProxy.framework */,
-				DDF756D822AA7841002E11D4 /* ProtocolProxyTests.xctest */,
-				DDF756EC22AA7854002E11D4 /* ProtocolProxy.framework */,
+				DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */,
+				DD86D54623D11B3E0046E63E /* ProtocolProxyTests.xctest */,
+				DD86D57023D11C860046E63E /* ProtocolProxy.framework */,
+				DD86D57823D11C860046E63E /* ProtocolProxyTests.xctest */,
+				DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */,
+				DD86D59423D11CA00046E63E /* ProtocolProxyTests.xctest */,
+				DD86D5C423D11D140046E63E /* ProtocolProxy.framework */,
+				DD48BC94270E0DE800D842BC /* ProtocolProxyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DDF7567522AA773D002E11D4 /* ProtocolProxy */ = {
+		DD86D53F23D11B3E0046E63E /* ProtocolProxy */ = {
 			isa = PBXGroup;
 			children = (
-				DDF756A522AA77B6002E11D4 /* Sources */,
-				DDA15DA725644F120036D007 /* Tests */,
-				DDF756A622AA77C1002E11D4 /* Supporting Files */,
+				DDB1DE252405EE5F00C20FED /* Sources */,
+				DDB1DE502405EE9900C20FED /* Tests */,
+				DD86D55B23D11BA80046E63E /* Supporting Files */,
 			);
 			name = ProtocolProxy;
 			sourceTree = "<group>";
 		};
-		DDF756A522AA77B6002E11D4 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				DDA15D6325644EDB0036D007 /* ProtocolProxy */,
-				DD391AFF2569BC8C001C99FA /* ProtocolProxySwift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		DDF756A622AA77C1002E11D4 /* Supporting Files */ = {
+		DD86D55B23D11BA80046E63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				DD17A9F9257744BC00D30599 /* scripts */,
 				DDA26DBD256EA4D700E1C6D7 /* workflows */,
-				DDF756A822AA77DE002E11D4 /* ProtocolProxy.podspec */,
-				DDA15DEE25644F680036D007 /* Package.swift */,
-				DDF756A722AA77DE002E11D4 /* README.md */,
-				DDF756A922AA77DE002E11D4 /* LICENSE */,
-				DDA15DEC25644F580036D007 /* ProtocolProxy-Info.plist */,
-				DDA15DED25644F580036D007 /* ProtocolProxyTests-Info.plist */,
+				DD86D5E023D22DB90046E63E /* ProtocolProxy.podspec */,
+				DD86D5DF23D22DB90046E63E /* Package.swift */,
+				DDB1DE5C2405EEE300C20FED /* codecov.yml */,
+				DD86D5E323D22DC30046E63E /* .swiftlint.yml */,
+				DD86D5E123D22DB90046E63E /* README.md */,
+				DD86D5DE23D22DB90046E63E /* LICENSE */,
+				DD86D54123D11B3E0046E63E /* ProtocolProxy-Info.plist */,
+				DD5D044A261FA56400BA0FC2 /* ProtocolProxyTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DDB1DE252405EE5F00C20FED /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91C52722ED200092BB79 /* ProtocolProxy */,
+				DD7E91CD2722ED200092BB79 /* ProtocolProxySwift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DDB1DE502405EE9900C20FED /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DD7E91A12722ED120092BB79 /* ProtocolProxyObjCTests */,
+				DD7E919C2722ED120092BB79 /* ProtocolProxySwiftTests */,
+				DD7E91962722ED120092BB79 /* ProtocolProxyTestsBase */,
+				DD48BC9E270E0F1300D842BC /* Test Plans */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DDF7566E22AA773D002E11D4 /* Headers */ = {
+		DD86D53823D11B3E0046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9425644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */,
-				DDA15D9025644EEE0036D007 /* ProtocolProxy.h in Headers */,
+				DD7E91D32722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
+				DD7E91CF2722ED210092BB79 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756AF22AA782D002E11D4 /* Headers */ = {
+		DD86D56B23D11C860046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9525644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */,
-				DDA15D9125644EEE0036D007 /* ProtocolProxy.h in Headers */,
+				DD7E91D42722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
+				DD7E91D02722ED210092BB79 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CB22AA7841002E11D4 /* Headers */ = {
+		DD86D58723D11CA00046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9625644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */,
-				DDA15D9225644EEE0036D007 /* ProtocolProxy.h in Headers */,
+				DD7E91D52722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
+				DD7E91D12722ED210092BB79 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E722AA7854002E11D4 /* Headers */ = {
+		DD86D5BF23D11D140046E63E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9725644EEE0036D007 /* ProtocolProxy+Internal.h in Headers */,
-				DDA15D9325644EEE0036D007 /* ProtocolProxy.h in Headers */,
+				DD7E91D62722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
+				DD7E91D22722ED210092BB79 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DDF7567222AA773D002E11D4 /* ProtocolProxy */ = {
+		DD48BC93270E0DE800D842BC /* ProtocolProxy watchOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF7568722AA773D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy" */;
+			buildConfigurationList = DD48BC9D270E0DE800D842BC /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS Tests" */;
 			buildPhases = (
-				DDF7566E22AA773D002E11D4 /* Headers */,
-				DDF7566F22AA773D002E11D4 /* Sources */,
-				DDF7567022AA773D002E11D4 /* Frameworks */,
-				DDF7567122AA773D002E11D4 /* Resources */,
+				DD48BC90270E0DE800D842BC /* Sources */,
+				DD48BC91270E0DE800D842BC /* Frameworks */,
+				DD48BC92270E0DE800D842BC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD48BC9A270E0DE800D842BC /* PBXTargetDependency */,
+			);
+			name = "ProtocolProxy watchOS Tests";
+			productName = "ProtocolProxy watchOS Tests";
+			productReference = DD48BC94270E0DE800D842BC /* ProtocolProxyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD86D53C23D11B3E0046E63E /* ProtocolProxy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy" */;
+			buildPhases = (
+				DD86D53823D11B3E0046E63E /* Headers */,
+				DD86D53923D11B3E0046E63E /* Sources */,
+				DD86D53A23D11B3E0046E63E /* Frameworks */,
+				DD86D53B23D11B3E0046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D56A23D11C6C0046E63E /* PBXTargetDependency */,
 			);
 			name = ProtocolProxy;
 			productName = ProtocolProxy;
-			productReference = DDF7567322AA773D002E11D4 /* ProtocolProxy.framework */;
+			productReference = DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF7567B22AA773D002E11D4 /* ProtocolProxyTests */ = {
+		DD86D54523D11B3E0046E63E /* ProtocolProxyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF7568A22AA773D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxyTests" */;
+			buildConfigurationList = DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxyTests" */;
 			buildPhases = (
-				DDF7567822AA773D002E11D4 /* Sources */,
-				DDF7567922AA773D002E11D4 /* Frameworks */,
-				DDF7567A22AA773D002E11D4 /* Resources */,
+				DD86D54223D11B3E0046E63E /* Sources */,
+				DD86D54323D11B3E0046E63E /* Frameworks */,
+				DD86D54423D11B3E0046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF7567F22AA773D002E11D4 /* PBXTargetDependency */,
+				DD86D54923D11B3E0046E63E /* PBXTargetDependency */,
 			);
 			name = ProtocolProxyTests;
 			productName = ProtocolProxyTests;
-			productReference = DDF7567C22AA773D002E11D4 /* ProtocolProxyTests.xctest */;
+			productReference = DD86D54623D11B3E0046E63E /* ProtocolProxyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756B322AA782D002E11D4 /* ProtocolProxy macOS */ = {
+		DD86D56F23D11C860046E63E /* ProtocolProxy macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756C522AA782D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS" */;
+			buildConfigurationList = DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS" */;
 			buildPhases = (
-				DDF756AF22AA782D002E11D4 /* Headers */,
-				DDF756B022AA782D002E11D4 /* Sources */,
-				DDF756B122AA782D002E11D4 /* Frameworks */,
-				DDF756B222AA782D002E11D4 /* Resources */,
+				DD86D56B23D11C860046E63E /* Headers */,
+				DD86D56C23D11C860046E63E /* Sources */,
+				DD86D56D23D11C860046E63E /* Frameworks */,
+				DD86D56E23D11C860046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD86D5D923D11DC60046E63E /* PBXTargetDependency */,
 			);
 			name = "ProtocolProxy macOS";
 			productName = "ProtocolProxy macOS";
-			productReference = DDF756B422AA782D002E11D4 /* ProtocolProxy.framework */;
+			productReference = DD86D57023D11C860046E63E /* ProtocolProxy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF756BB22AA782D002E11D4 /* ProtocolProxy macOS Tests */ = {
+		DD86D57723D11C860046E63E /* ProtocolProxy macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756C822AA782D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS Tests" */;
+			buildConfigurationList = DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS Tests" */;
 			buildPhases = (
-				DDF756B822AA782D002E11D4 /* Sources */,
-				DDF756B922AA782D002E11D4 /* Frameworks */,
-				DDF756BA22AA782D002E11D4 /* Resources */,
+				DD86D57423D11C860046E63E /* Sources */,
+				DD86D57523D11C860046E63E /* Frameworks */,
+				DD86D57623D11C860046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF756BF22AA782D002E11D4 /* PBXTargetDependency */,
+				DD86D57B23D11C860046E63E /* PBXTargetDependency */,
 			);
 			name = "ProtocolProxy macOS Tests";
-			productName = "ProtocolProxy macOS Tests";
-			productReference = DDF756BC22AA782D002E11D4 /* ProtocolProxyTests.xctest */;
+			productName = "ProtocolProxy macOSTests";
+			productReference = DD86D57823D11C860046E63E /* ProtocolProxyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756CF22AA7841002E11D4 /* ProtocolProxy tvOS */ = {
+		DD86D58B23D11CA00046E63E /* ProtocolProxy tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756E122AA7841002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS" */;
+			buildConfigurationList = DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS" */;
 			buildPhases = (
-				DDF756CB22AA7841002E11D4 /* Headers */,
-				DDF756CC22AA7841002E11D4 /* Sources */,
-				DDF756CD22AA7841002E11D4 /* Frameworks */,
-				DDF756CE22AA7841002E11D4 /* Resources */,
+				DD86D58723D11CA00046E63E /* Headers */,
+				DD86D58823D11CA00046E63E /* Sources */,
+				DD86D58923D11CA00046E63E /* Frameworks */,
+				DD86D58A23D11CA00046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD86D5DB23D11DC90046E63E /* PBXTargetDependency */,
 			);
 			name = "ProtocolProxy tvOS";
 			productName = "ProtocolProxy tvOS";
-			productReference = DDF756D022AA7841002E11D4 /* ProtocolProxy.framework */;
+			productReference = DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDF756D722AA7841002E11D4 /* ProtocolProxy tvOS Tests */ = {
+		DD86D59323D11CA00046E63E /* ProtocolProxy tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756E422AA7841002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS Tests" */;
+			buildConfigurationList = DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS Tests" */;
 			buildPhases = (
-				DDF756D422AA7841002E11D4 /* Sources */,
-				DDF756D522AA7841002E11D4 /* Frameworks */,
-				DDF756D622AA7841002E11D4 /* Resources */,
+				DD86D59023D11CA00046E63E /* Sources */,
+				DD86D59123D11CA00046E63E /* Frameworks */,
+				DD86D59223D11CA00046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDF756DB22AA7841002E11D4 /* PBXTargetDependency */,
+				DD86D59723D11CA00046E63E /* PBXTargetDependency */,
 			);
 			name = "ProtocolProxy tvOS Tests";
-			productName = "ProtocolProxy tvOS Tests";
-			productReference = DDF756D822AA7841002E11D4 /* ProtocolProxyTests.xctest */;
+			productName = "ProtocolProxy tvOSTests";
+			productReference = DD86D59423D11CA00046E63E /* ProtocolProxyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF756EB22AA7854002E11D4 /* ProtocolProxy watchOS */ = {
+		DD86D5C323D11D140046E63E /* ProtocolProxy watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDF756F122AA7854002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS" */;
+			buildConfigurationList = DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS" */;
 			buildPhases = (
-				DDF756E722AA7854002E11D4 /* Headers */,
-				DDF756E822AA7854002E11D4 /* Sources */,
-				DDF756E922AA7854002E11D4 /* Frameworks */,
-				DDF756EA22AA7854002E11D4 /* Resources */,
+				DD86D5BF23D11D140046E63E /* Headers */,
+				DD86D5C023D11D140046E63E /* Sources */,
+				DD86D5C123D11D140046E63E /* Frameworks */,
+				DD86D5C223D11D140046E63E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD86D5DD23D11DCC0046E63E /* PBXTargetDependency */,
 			);
 			name = "ProtocolProxy watchOS";
 			productName = "ProtocolProxy watchOS";
-			productReference = DDF756EC22AA7854002E11D4 /* ProtocolProxy.framework */;
+			productReference = DD86D5C423D11D140046E63E /* ProtocolProxy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DDF7566A22AA773D002E11D4 /* Project object */ = {
+		DD86D53423D11B3E0046E63E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1220;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
 					DD2FBC27258BE8BB00DB3211 = {
-						CreatedOnToolsVersion = 12.3;
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF7567222AA773D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1220;
+					DD48BC93270E0DE800D842BC = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF7567B22AA773D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1210;
+					DD86D53C23D11B3E0046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF756B322AA782D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1220;
+					DD86D54523D11B3E0046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF756BB22AA782D002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1210;
+					DD86D56423D11C4B0046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF756CF22AA7841002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1220;
+					DD86D56F23D11C860046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF756D722AA7841002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1210;
+					DD86D57723D11C860046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
-					DDF756EB22AA7854002E11D4 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1220;
+					DD86D58B23D11CA00046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+					};
+					DD86D59323D11CA00046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
+					};
+					DD86D5C323D11D140046E63E = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
-			buildConfigurationList = DDF7566D22AA773D002E11D4 /* Build configuration list for PBXProject "ProtocolProxy" */;
+			buildConfigurationList = DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "ProtocolProxy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -559,67 +668,76 @@
 				en,
 				Base,
 			);
-			mainGroup = DDF7566922AA773D002E11D4;
-			productRefGroup = DDF7567422AA773D002E11D4 /* Products */;
+			mainGroup = DD86D53323D11B3E0046E63E;
+			productRefGroup = DD86D53E23D11B3E0046E63E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DDF7567222AA773D002E11D4 /* ProtocolProxy */,
-				DDF7567B22AA773D002E11D4 /* ProtocolProxyTests */,
-				DDF756B322AA782D002E11D4 /* ProtocolProxy macOS */,
-				DDF756BB22AA782D002E11D4 /* ProtocolProxy macOS Tests */,
-				DDF756CF22AA7841002E11D4 /* ProtocolProxy tvOS */,
-				DDF756D722AA7841002E11D4 /* ProtocolProxy tvOS Tests */,
-				DDF756EB22AA7854002E11D4 /* ProtocolProxy watchOS */,
+				DD86D53C23D11B3E0046E63E /* ProtocolProxy */,
+				DD86D54523D11B3E0046E63E /* ProtocolProxyTests */,
+				DD86D56F23D11C860046E63E /* ProtocolProxy macOS */,
+				DD86D57723D11C860046E63E /* ProtocolProxy macOS Tests */,
+				DD86D58B23D11CA00046E63E /* ProtocolProxy tvOS */,
+				DD86D59323D11CA00046E63E /* ProtocolProxy tvOS Tests */,
+				DD86D5C323D11D140046E63E /* ProtocolProxy watchOS */,
+				DD48BC93270E0DE800D842BC /* ProtocolProxy watchOS Tests */,
+				DD86D56423D11C4B0046E63E /* Run SwiftLint */,
 				DD2FBC27258BE8BB00DB3211 /* XCFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DDF7567122AA773D002E11D4 /* Resources */ = {
+		DD48BC92270E0DE800D842BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567A22AA773D002E11D4 /* Resources */ = {
+		DD86D53B23D11B3E0046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B222AA782D002E11D4 /* Resources */ = {
+		DD86D54423D11B3E0046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756BA22AA782D002E11D4 /* Resources */ = {
+		DD86D56E23D11C860046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CE22AA7841002E11D4 /* Resources */ = {
+		DD86D57623D11C860046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D622AA7841002E11D4 /* Resources */ = {
+		DD86D58A23D11CA00046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756EA22AA7854002E11D4 /* Resources */ = {
+		DD86D59223D11CA00046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C223D11D140046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -647,111 +765,169 @@
 			shellPath = /bin/sh;
 			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh -configuration ${CONFIGURATION} -output \"${BUILD_DIR}/${CONFIGURATION}-universal/ProtocolProxy.xcframework\" \n";
 		};
+		DD86D56823D11C550046E63E /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DDF7566F22AA773D002E11D4 /* Sources */ = {
+		DD48BC90270E0DE800D842BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9C25644EEE0036D007 /* ProtocolProxy.m in Sources */,
-				DDA15D9825644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */,
-				DD391B012569BC8C001C99FA /* ProtocolProxy.swift in Sources */,
+				DD7E91B42722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD7E91B02722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91A82722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
+				DD7E91C02722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
+				DD7E91B82722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD7E91C42722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
+				DD7E91BC2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD7E91AC2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF7567822AA773D002E11D4 /* Sources */ = {
+		DD86D53923D11B3E0046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15DBA25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */,
-				DDA15DC025644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */,
-				DDA15DB725644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */,
-				DDA15DC925644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DDA15DBD25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */,
-				DDA15DCC25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */,
-				DDA15DC625644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */,
-				DDA15DC325644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91DB2722ED210092BB79 /* ProtocolProxy.m in Sources */,
+				DD7E91D72722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
+				DD7E91DF2722ED210092BB79 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B022AA782D002E11D4 /* Sources */ = {
+		DD86D54223D11B3E0046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9D25644EEE0036D007 /* ProtocolProxy.m in Sources */,
-				DDA15D9925644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */,
-				DD391B022569BC8C001C99FA /* ProtocolProxy.swift in Sources */,
+				DD7E91B12722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD7E91AD2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91A52722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
+				DD7E91BD2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
+				DD7E91B52722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD7E91C12722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
+				DD7E91B92722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD7E91A92722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756B822AA782D002E11D4 /* Sources */ = {
+		DD86D56C23D11C860046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15DBB25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */,
-				DDA15DC125644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */,
-				DDA15DB825644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */,
-				DDA15DCA25644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DDA15DBE25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */,
-				DDA15DCD25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */,
-				DDA15DC725644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */,
-				DDA15DC425644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91DC2722ED210092BB79 /* ProtocolProxy.m in Sources */,
+				DD7E91D82722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
+				DD7E91E02722ED210092BB79 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756CC22AA7841002E11D4 /* Sources */ = {
+		DD86D57423D11C860046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9E25644EEE0036D007 /* ProtocolProxy.m in Sources */,
-				DDA15D9A25644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */,
-				DD391B032569BC8C001C99FA /* ProtocolProxy.swift in Sources */,
+				DD7E91B22722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD7E91AE2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91A62722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
+				DD7E91BE2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
+				DD7E91B62722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD7E91C22722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
+				DD7E91BA2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD7E91AA2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756D422AA7841002E11D4 /* Sources */ = {
+		DD86D58823D11CA00046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15DBC25644F120036D007 /* ProtocolProxyObserverTests.m in Sources */,
-				DDA15DC225644F120036D007 /* ProtocolProxyBasicTests.swift in Sources */,
-				DDA15DB925644F120036D007 /* ProtocolProxyOverrideTests.m in Sources */,
-				DDA15DCB25644F120036D007 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DDA15DBF25644F120036D007 /* ProtocolProxyBasicTests.m in Sources */,
-				DDA15DCE25644F120036D007 /* ProtocolProxyTestsBase.m in Sources */,
-				DDA15DC825644F120036D007 /* ProtocolProxyObserverTests.swift in Sources */,
-				DDA15DC525644F120036D007 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91DD2722ED210092BB79 /* ProtocolProxy.m in Sources */,
+				DD7E91D92722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
+				DD7E91E12722ED210092BB79 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF756E822AA7854002E11D4 /* Sources */ = {
+		DD86D59023D11CA00046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA15D9F25644EEE0036D007 /* ProtocolProxy.m in Sources */,
-				DDA15D9B25644EEE0036D007 /* ProtocolProxy+Internal.m in Sources */,
-				DD391B042569BC8C001C99FA /* ProtocolProxy.swift in Sources */,
+				DD7E91B32722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD7E91AF2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD7E91A72722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
+				DD7E91BF2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
+				DD7E91B72722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD7E91C32722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
+				DD7E91BB2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD7E91AB2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C023D11D140046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7E91DE2722ED210092BB79 /* ProtocolProxy.m in Sources */,
+				DD7E91DA2722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
+				DD7E91E22722ED210092BB79 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DDF7567F22AA773D002E11D4 /* PBXTargetDependency */ = {
+		DD48BC9A270E0DE800D842BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF7567222AA773D002E11D4 /* ProtocolProxy */;
-			targetProxy = DDF7567E22AA773D002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D5C323D11D140046E63E /* ProtocolProxy watchOS */;
+			targetProxy = DD48BC99270E0DE800D842BC /* PBXContainerItemProxy */;
 		};
-		DDF756BF22AA782D002E11D4 /* PBXTargetDependency */ = {
+		DD86D54923D11B3E0046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF756B322AA782D002E11D4 /* ProtocolProxy macOS */;
-			targetProxy = DDF756BE22AA782D002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D53C23D11B3E0046E63E /* ProtocolProxy */;
+			targetProxy = DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */;
 		};
-		DDF756DB22AA7841002E11D4 /* PBXTargetDependency */ = {
+		DD86D56A23D11C6C0046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDF756CF22AA7841002E11D4 /* ProtocolProxy tvOS */;
-			targetProxy = DDF756DA22AA7841002E11D4 /* PBXContainerItemProxy */;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D56923D11C6C0046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D57B23D11C860046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56F23D11C860046E63E /* ProtocolProxy macOS */;
+			targetProxy = DD86D57A23D11C860046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D59723D11CA00046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D58B23D11CA00046E63E /* ProtocolProxy tvOS */;
+			targetProxy = DD86D59623D11CA00046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5D923D11DC60046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5D823D11DC60046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5DB23D11DC90046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5DA23D11DC90046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5DD23D11DCC0046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5DC23D11DCC0046E63E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -760,7 +936,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH26G7KHX9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -769,12 +944,59 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH26G7KHX9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		DDF7568522AA773D002E11D4 /* Debug */ = {
+		DD48BC9B270E0DE800D842BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
+				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
+				PRODUCT_NAME = ProtocolProxyTests;
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		DD48BC9C270E0DE800D842BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
+				INFOPLIST_FILE = "Plists/TestProjectTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.testprojecttests;
+				PRODUCT_NAME = TestProjectTests;
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		DD86D54F23D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -833,14 +1055,17 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		DDF7568622AA773D002E11D4 /* Release */ = {
+		DD86D55023D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -893,7 +1118,9 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -901,7 +1128,7 @@
 			};
 			name = Release;
 		};
-		DDF7568822AA773D002E11D4 /* Debug */ = {
+		DD86D55223D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -923,11 +1150,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
-		DDF7568922AA773D002E11D4 /* Release */ = {
+		DD86D55323D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -948,17 +1175,17 @@
 				PRODUCT_NAME = ProtocolProxy;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
-		DDF7568B22AA773D002E11D4 /* Debug */ = {
+		DD86D55523D11B3E0046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
 				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -968,19 +1195,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
 				PRODUCT_NAME = ProtocolProxyTests;
 				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
-		DDF7568C22AA773D002E11D4 /* Release */ = {
+		DD86D55623D11B3E0046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
 				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,12 +1215,27 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
 				PRODUCT_NAME = ProtocolProxyTests;
 				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
-		DDF756C622AA782D002E11D4 /* Debug */ = {
+		DD86D56623D11C4B0046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD86D56723D11C4B0046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD86D58223D11C870046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1006,7 +1246,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Plists/ProtocolProxy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1023,7 +1262,7 @@
 			};
 			name = Debug;
 		};
-		DDF756C722AA782D002E11D4 /* Release */ = {
+		DD86D58323D11C870046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1034,7 +1273,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "Plists/ProtocolProxy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1050,7 +1288,7 @@
 			};
 			name = Release;
 		};
-		DDF756C922AA782D002E11D4 /* Debug */ = {
+		DD86D58523D11C870046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -1058,29 +1296,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
-				PRODUCT_NAME = ProtocolProxyTests;
-				SDKROOT = macosx;
-				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		DDF756CA22AA782D002E11D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
 				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1091,11 +1307,35 @@
 				PRODUCT_NAME = ProtocolProxyTests;
 				SDKROOT = macosx;
 				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD86D58623D11C870046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
+				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
+				PRODUCT_NAME = ProtocolProxyTests;
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		DDF756E222AA7841002E11D4 /* Debug */ = {
+		DD86D59E23D11CA00046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1122,7 +1362,7 @@
 			};
 			name = Debug;
 		};
-		DDF756E322AA7841002E11D4 /* Release */ = {
+		DD86D59F23D11CA00046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1148,12 +1388,14 @@
 			};
 			name = Release;
 		};
-		DDF756E522AA7841002E11D4 /* Debug */ = {
+		DD86D5A123D11CA00046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
 				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1170,12 +1412,14 @@
 			};
 			name = Debug;
 		};
-		DDF756E622AA7841002E11D4 /* Release */ = {
+		DD86D5A223D11CA00046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
 				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1191,7 +1435,7 @@
 			};
 			name = Release;
 		};
-		DDF756F222AA7854002E11D4 /* Debug */ = {
+		DD86D5CA23D11D140046E63E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1219,7 +1463,7 @@
 			};
 			name = Debug;
 		};
-		DDF756F322AA7854002E11D4 /* Release */ = {
+		DD86D5CB23D11D140046E63E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1258,79 +1502,97 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7566D22AA773D002E11D4 /* Build configuration list for PBXProject "ProtocolProxy" */ = {
+		DD48BC9D270E0DE800D842BC /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568522AA773D002E11D4 /* Debug */,
-				DDF7568622AA773D002E11D4 /* Release */,
+				DD48BC9B270E0DE800D842BC /* Debug */,
+				DD48BC9C270E0DE800D842BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7568722AA773D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy" */ = {
+		DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "ProtocolProxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568822AA773D002E11D4 /* Debug */,
-				DDF7568922AA773D002E11D4 /* Release */,
+				DD86D54F23D11B3E0046E63E /* Debug */,
+				DD86D55023D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF7568A22AA773D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxyTests" */ = {
+		DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF7568B22AA773D002E11D4 /* Debug */,
-				DDF7568C22AA773D002E11D4 /* Release */,
+				DD86D55223D11B3E0046E63E /* Debug */,
+				DD86D55323D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756C522AA782D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS" */ = {
+		DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756C622AA782D002E11D4 /* Debug */,
-				DDF756C722AA782D002E11D4 /* Release */,
+				DD86D55523D11B3E0046E63E /* Debug */,
+				DD86D55623D11B3E0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756C822AA782D002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS Tests" */ = {
+		DD86D56523D11C4B0046E63E /* Build configuration list for PBXAggregateTarget "Run SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756C922AA782D002E11D4 /* Debug */,
-				DDF756CA22AA782D002E11D4 /* Release */,
+				DD86D56623D11C4B0046E63E /* Debug */,
+				DD86D56723D11C4B0046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756E122AA7841002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS" */ = {
+		DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756E222AA7841002E11D4 /* Debug */,
-				DDF756E322AA7841002E11D4 /* Release */,
+				DD86D58223D11C870046E63E /* Debug */,
+				DD86D58323D11C870046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756E422AA7841002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS Tests" */ = {
+		DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756E522AA7841002E11D4 /* Debug */,
-				DDF756E622AA7841002E11D4 /* Release */,
+				DD86D58523D11C870046E63E /* Debug */,
+				DD86D58623D11C870046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDF756F122AA7854002E11D4 /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS" */ = {
+		DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDF756F222AA7854002E11D4 /* Debug */,
-				DDF756F322AA7854002E11D4 /* Release */,
+				DD86D59E23D11CA00046E63E /* Debug */,
+				DD86D59F23D11CA00046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D5A123D11CA00046E63E /* Debug */,
+				DD86D5A223D11CA00046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "ProtocolProxy watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D5CA23D11D140046E63E /* Debug */,
+				DD86D5CB23D11D140046E63E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DDF7566A22AA773D002E11D4 /* Project object */;
+	rootObject = DD86D53423D11B3E0046E63E /* Project object */;
 }

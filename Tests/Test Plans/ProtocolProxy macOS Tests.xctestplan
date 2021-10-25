@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "E83DAAAA-7E95-423A-B5C0-11038E54B4FC",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:ProtocolProxy.xcodeproj",
+          "identifier" : "DD86D56F23D11C860046E63E",
+          "name" : "ProtocolProxy macOS"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ProtocolProxy.xcodeproj",
+        "identifier" : "DD86D57723D11C860046E63E",
+        "name" : "ProtocolProxy macOS Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

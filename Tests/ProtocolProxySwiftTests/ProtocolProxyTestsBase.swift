@@ -1,9 +1,8 @@
 //
 //  ProtocolProxyTestsBase.swift
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/16/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 import ObjectiveC
@@ -14,7 +13,7 @@ extension Protocol: Equatable {
 
     // MARK: Equatable Protocol Requirements
 
-    public static func ==(lhs: Protocol, rhs: Protocol) -> Bool {
+    public static func == (lhs: Protocol, rhs: Protocol) -> Bool {
         return protocol_isEqual(lhs, rhs)
     }
 }

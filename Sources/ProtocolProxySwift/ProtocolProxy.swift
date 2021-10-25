@@ -2,12 +2,12 @@
 //  ProtocolProxy.swift
 //  ProtocolProxy
 //
-//  Created by Joseph Newton on 11/20/20.
-//  Copyright © 2020 Some Random iOS Dev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if SWIFT_PACKAGE
 import ObjectiveC
+
+#if SWIFT_PACKAGE
 import ProtocolProxy
 #endif // #if SWIFT_PACKAGE
 
