@@ -2,8 +2,7 @@
 //  ProtocolProxy.m
 //  ProtocolProxy
 //
-//  Created by Joseph Newton on 10/29/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import "ProtocolProxy.h"
@@ -12,6 +11,12 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <os/log.h>
+
+#pragma mark - Preprocessor Definitions
+
+#define _adoptedProtocols                 _protocolProxyAdoptedProtocols
+#define _implementer                      _protocolProxyImplementer
+#define _respondsToSelectorsWithObservers _protocolProxyRespondsToSelectorsWithObservers
 
 #pragma mark - ProtocolProxy Implementation
 

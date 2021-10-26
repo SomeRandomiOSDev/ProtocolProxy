@@ -1,9 +1,8 @@
 //
 //  ProtocolProxyTestsBase.m
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/11/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import "ProtocolProxyTestsBase.h"

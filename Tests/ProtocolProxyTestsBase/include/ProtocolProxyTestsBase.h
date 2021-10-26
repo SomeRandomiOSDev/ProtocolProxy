@@ -1,9 +1,8 @@
 //
 //  ProtocolProxyTestsBase.h
-//  ProtocolProxy
+//  ProtocolProxyTests
 //
-//  Created by Joseph Newton on 11/11/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -28,9 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)noReturnValueOneArgument:(id)argument;
 - (void)noReturnValueTwoArguments:(id)argument1 :(id)argument2;
 
-- (id)returnValueNoArguments;
-- (id)returnValueOneArgument:(id)argument;
-- (id)returnValueTwoArguments:(id)argument1 :(id)argument2;
+- (nullable id)returnValueNoArguments;
+- (nullable id)returnValueOneArgument:(id)argument;
+- (nullable id)returnValueTwoArguments:(id)argument1 :(id)argument2;
 
 @end
 

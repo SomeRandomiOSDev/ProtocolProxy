@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#
 # xcframework.sh
 # Usage example: ./xcframework.sh -output <some_path>/ProtocolProxy.xcframework
 
@@ -27,7 +27,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [ -z ${OUTPUT_DIR+x} ]; then
-    OUTPUT_DIR="$(dirname "$(realpath "$0")")/build/ProtocolProxy.xcframework"
+    OUTPUT_DIR="$(dirname "$0")/build/ProtocolProxy.xcframework"
 fi
 
 if [ -z ${CONFIGURATION+x} ]; then
@@ -37,7 +37,7 @@ fi
 # Create Temporary Directory
 
 TMPDIR=`mktemp -d /tmp/.protocolproxy.xcframework.build.XXXXXX`
-cd "$(dirname "$(dirname "$(realpath "$0")")")"
+cd "$(dirname "$(dirname "$0")")"
 
 check_result() {
     if [ $1 -ne 0 ]; then

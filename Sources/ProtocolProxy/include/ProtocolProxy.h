@@ -2,8 +2,7 @@
 //  ProtocolProxy.h
 //  ProtocolProxy
 //
-//  Created by Joseph Newton on 10/29/20.
-//  Copyright © 2020 SomeRandomiOSDev. All rights reserved.
+//  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

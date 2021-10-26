@@ -254,7 +254,21 @@ if ([delegate respondsToSelector:@selector(adaptivePresentationStyleForPresentat
 
 Given that `ProtocolProxy` is supposed to serve as a stand-in for protocols there's a chance, however slight, that this object could be initialized with a protocol that declares methods or properties whose names overlap exactly with the names of these properties. In that scenario, calling the overlapped property(ies) will no longer get or set the values listed above. Instead, the call will follow the normal forwarding routine regardless of whether or not `implementer` is `nil` or if the overlapped methods/properties are optional and not implemented by `implementer`.
 
-In this scenario, these properties can still be accessed by using the `object_getIvar`/`object_setIvar` Objective-C runtime functions with the respective propery names preceded by an underscore: `_implementer`, `_adoptedProtocols`, `_respondsToSelectorsWithObservers`.
+In this scenario, these properties can still be accessed by using the `object_getIvar`/`object_setIvar` or `ivar_getOffset` Objective-C runtime functions with the following property names: `_protocolProxyImplementer`, `_protocolProxyAdoptedProtocols`, `_protocolProxyRespondsToSelectorsWithObservers`.
+
+```objc
+// Sets a value to `ProtocolProxy`'s `respondsToSelectorsWithObservers` property where the proxy adopts a protocol that has a `@property BOOL respondsToSelectorsWithObservers` requirement
+
+ProtocolProxy *proxy = ...
+Ivar ivar = class_getInstanceVariable(proxy.class, "_protocolProxyRespondsToSelectorsWithObservers");
+ 
+object_setIvar(proxy, ivar, @YES);
+
+// OR
+
+ptrdiff_t offset = ivar_getOffset(ivar);
+*(BOOL *)((uint8_t *)(__bridge void *)proxy + offset) = YES;
+```
 
 ---
 

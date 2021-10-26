@@ -12,7 +12,7 @@ let package = Package(
     ],
 
     products: [
-        .library(name: "ProtocolProxy", targets: ["ProtocolProxy", "ProtocolProxySwift"]),
+        .library(name: "ProtocolProxy", targets: ["ProtocolProxy", "ProtocolProxySwift"])
     ],
 
     targets: [
@@ -22,5 +22,7 @@ let package = Package(
         .target(name: "ProtocolProxyTestsBase", path: "Tests/ProtocolProxyTestsBase"),
         .testTarget(name: "ProtocolProxyObjCTests", dependencies: ["ProtocolProxy", "ProtocolProxySwift", "ProtocolProxyTestsBase"]),
         .testTarget(name: "ProtocolProxySwiftTests", dependencies: ["ProtocolProxy", "ProtocolProxySwift", "ProtocolProxyTestsBase"])
-    ]
+    ],
+
+    swiftLanguageVersions: [.version("5")]
 )

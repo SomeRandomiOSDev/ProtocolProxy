@@ -1,10 +1,10 @@
 name: Cocoapods
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   lint:
     name: Lint
-    runs-on: macOS-latest
+    runs-on: macOS-11
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
