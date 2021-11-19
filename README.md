@@ -1,5 +1,4 @@
 # ProtocolProxy
-Flexible proxy for overriding and observing protocol method/property messages.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d30d31c29f17449481b97a04610ff5b9)](https://app.codacy.com/app/SomeRandomiOSDev/ProtocolProxy?utm_source=github.com&utm_medium=referral&utm_content=SomeRandomiOSDev/ProtocolProxy&utm_campaign=Badge_Grade_Dashboard)
 [![License MIT](https://img.shields.io/cocoapods/l/ProtocolProxy.svg)](https://cocoapods.org/pods/ProtocolProxy)
@@ -8,10 +7,14 @@ Flexible proxy for overriding and observing protocol method/property messages.
 [![Platform](https://img.shields.io/cocoapods/p/ProtocolProxy.svg)](https://cocoapods.org/pods/ProtocolProxy)
 [![Code Coverage](https://codecov.io/gh/SomeRandomiOSDev/ProtocolProxy/branch/master/graph/badge.svg)](https://codecov.io/gh/SomeRandomiOSDev/ProtocolProxy)
 
-![Swift Package](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Swift%20Package/badge.svg)
-![Xcode Project](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Xcode%20Project/badge.svg)
-![Cocoapods](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Cocoapods/badge.svg)
-![Carthage](https://github.com/SomeRandomiOSDev/ProtocolProxy/workflows/Carthage/badge.svg)
+[![Carthage](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/carthage.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/carthage.yml)
+[![Cocoapods](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/cocoapods.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/cocoapods.yml)
+[![Swift Package](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/swift-package.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/swift-package.yml)
+[![SwiftLint](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/swiftlint.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/swiftlint.yml)
+[![XCFramework](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/xcframework.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/xcframework.yml)
+[![Xcode Project](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/xcodebuild.yml/badge.svg)](https://github.com/SomeRandomiOSDev/ProtocolProxy/actions/workflows/xcodebuild.yml)
+
+Flexible proxy for overriding and observing protocol method/property messages.
 
 ## Purpose
 
@@ -19,7 +22,7 @@ The purpose of this library is to provide a lightweight class that serves as a s
 
 ## Installation
 
-**ProtocolProxy** is available through [CocoaPods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) and the [Swift Package Manager](https://swift.org/package-manager/).
+**ProtocolProxy** is available through [CocoaPods](https://cocoapods.org), [Carthage](https://github.com/Carthage/Carthage) and the [Swift Package Manager](https://swift.org/package-manager/). 
 
 To install via CocoaPods, simply add the following line to your Podfile:
 
@@ -287,12 +290,16 @@ let observerBlock: @convention(block) () -> Void = {
 proxy.addObserver(for: #selector(foobar), beforeObservedSelector: true, using: observerBlock)
 ```
 
-Presently there is no way to inline the `@convention(block)` attribute to be able to declare the closure within the method call, therefore a local variable with an explicit type must be created for compatability with these methods. If this attribute is forgotten both of these methods will return `false` when attempting to register an override or an observer. 
+Presently there is no way to inline the `@convention(block)` attribute to be able to declare the closure within the method call, therefore a local variable with an explicit type must be created for compatability with these methods. If this attribute is forgotten both of these methods will return `false` when attempting to register an override or an observer.
+
+## Contributing
+
+Whether it's submitting a feature request, reporting a bug, or writing code yourself, all contributions to this library are welcome! Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more information on how you can contribute.
 
 ## Author
 
-Joseph Newton, somerandomiosdev@gmail.com
+Joe Newton, somerandomiosdev@gmail.com
 
 ## License
 
-ProtocolProxy is available under the MIT license. See the LICENSE file for more info.
+**ProtocolProxy** is available under the MIT license. See the `LICENSE` file for more info.

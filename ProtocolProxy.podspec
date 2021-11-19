@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  
+
   s.name         = "ProtocolProxy"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Flexible proxy for overriding and observing protocol method/property messages"
   s.description  = <<-DESC
                    A small helper library that provides a proxy class for overriding and observing method and property messages from one or more protocols
                    DESC
-  
+
   s.homepage     = "https://github.com/SomeRandomiOSDev/ProtocolProxy"
   s.license      = "MIT"
   s.author       = { "Joe Newton" => "somerandomiosdev@gmail.com" }
@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
                              'Tests/ProtocolProxySwiftTests/*.swift',
                              'Tests/ProtocolProxyTestsBase/**/*{h,m}'
   end
-  
+
 end
