@@ -32,59 +32,59 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DD02B7A3274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */; };
+		DD02B7A4274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */; };
+		DD02B7A5274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */; };
+		DD02B7A6274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */; };
+		DD02B7A7274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */; };
+		DD02B7A8274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */; };
+		DD02B7A9274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */; };
+		DD02B7AA274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */; };
+		DD02B7AB274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */; };
+		DD02B7AC274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */; };
+		DD02B7AD274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */; };
+		DD02B7AE274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */; };
+		DD02B7AF274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */; };
+		DD02B7B0274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */; };
+		DD02B7B1274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */; };
+		DD02B7B2274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */; };
+		DD02B7B3274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */; };
+		DD02B7B4274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */; };
+		DD02B7B5274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */; };
+		DD02B7B6274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */; };
+		DD02B7B7274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */; };
+		DD02B7B8274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */; };
+		DD02B7B9274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */; };
+		DD02B7BA274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */; };
+		DD02B7BB274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */; };
+		DD02B7BC274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */; };
+		DD02B7BD274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */; };
+		DD02B7BE274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */; };
+		DD02B7BF274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */; };
+		DD02B7C0274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */; };
+		DD02B7C1274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */; };
+		DD02B7C2274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */; };
+		DD02B7CA2747341C007F5569 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C42747341C007F5569 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD02B7CB2747341C007F5569 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C42747341C007F5569 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD02B7CC2747341C007F5569 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C42747341C007F5569 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD02B7CD2747341C007F5569 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C42747341C007F5569 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD02B7CE2747341C007F5569 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */; };
+		DD02B7CF2747341C007F5569 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */; };
+		DD02B7D02747341C007F5569 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */; };
+		DD02B7D12747341C007F5569 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */; };
+		DD02B7D22747341C007F5569 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */; };
+		DD02B7D32747341C007F5569 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */; };
+		DD02B7D42747341C007F5569 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */; };
+		DD02B7D52747341C007F5569 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */; };
+		DD02B7D62747341C007F5569 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C92747341C007F5569 /* ProtocolProxy.m */; };
+		DD02B7D72747341C007F5569 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C92747341C007F5569 /* ProtocolProxy.m */; };
+		DD02B7D82747341C007F5569 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C92747341C007F5569 /* ProtocolProxy.m */; };
+		DD02B7D92747341C007F5569 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7C92747341C007F5569 /* ProtocolProxy.m */; };
+		DD02B7DC27473421007F5569 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7DB27473421007F5569 /* ProtocolProxy.swift */; };
+		DD02B7DD27473421007F5569 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7DB27473421007F5569 /* ProtocolProxy.swift */; };
+		DD02B7DE27473421007F5569 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7DB27473421007F5569 /* ProtocolProxy.swift */; };
+		DD02B7DF27473421007F5569 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02B7DB27473421007F5569 /* ProtocolProxy.swift */; };
 		DD48BC98270E0DE800D842BC /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D5C423D11D140046E63E /* ProtocolProxy.framework */; };
-		DD7E91A52722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
-		DD7E91A62722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
-		DD7E91A72722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
-		DD7E91A82722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */; };
-		DD7E91A92722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
-		DD7E91AA2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
-		DD7E91AB2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
-		DD7E91AC2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */; };
-		DD7E91AD2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
-		DD7E91AE2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
-		DD7E91AF2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
-		DD7E91B02722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */; };
-		DD7E91B12722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
-		DD7E91B22722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
-		DD7E91B32722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
-		DD7E91B42722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */; };
-		DD7E91B52722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
-		DD7E91B62722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
-		DD7E91B72722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
-		DD7E91B82722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */; };
-		DD7E91B92722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
-		DD7E91BA2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
-		DD7E91BB2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
-		DD7E91BC2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */; };
-		DD7E91BD2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
-		DD7E91BE2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
-		DD7E91BF2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
-		DD7E91C02722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */; };
-		DD7E91C12722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
-		DD7E91C22722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
-		DD7E91C32722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
-		DD7E91C42722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */; };
-		DD7E91CF2722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7E91D02722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7E91D12722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7E91D22722ED210092BB79 /* ProtocolProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91C72722ED200092BB79 /* ProtocolProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7E91D32722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
-		DD7E91D42722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
-		DD7E91D52722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
-		DD7E91D62722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */; };
-		DD7E91D72722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
-		DD7E91D82722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
-		DD7E91D92722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
-		DD7E91DA2722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */; };
-		DD7E91DB2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
-		DD7E91DC2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
-		DD7E91DD2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
-		DD7E91DE2722ED210092BB79 /* ProtocolProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */; };
-		DD7E91DF2722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
-		DD7E91E02722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
-		DD7E91E12722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
-		DD7E91E22722ED210092BB79 /* ProtocolProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */; };
 		DD86D54723D11B3E0046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */; };
 		DD86D57923D11C860046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* ProtocolProxy.framework */; };
 		DD86D59523D11CA00046E63E /* ProtocolProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */; };
@@ -150,43 +150,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD02B796274733D0007F5569 /* ProtocolProxyTestsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxyTestsBase.h; sourceTree = "<group>"; };
+		DD02B797274733D0007F5569 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyTestsBase.m; sourceTree = "<group>"; };
+		DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyOverrideTests.m; sourceTree = "<group>"; };
+		DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyObserverTests.m; sourceTree = "<group>"; };
+		DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyBasicTests.m; sourceTree = "<group>"; };
+		DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyBasicTests.swift; sourceTree = "<group>"; };
+		DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyTestsBase.swift; sourceTree = "<group>"; };
+		DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyObserverTests.swift; sourceTree = "<group>"; };
+		DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyOverrideTests.swift; sourceTree = "<group>"; };
+		DD02B7C42747341C007F5569 /* ProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxy.h; sourceTree = "<group>"; };
+		DD02B7C52747341C007F5569 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProtocolProxy+Internal.h"; sourceTree = "<group>"; };
+		DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProtocolProxy+Internal.m"; sourceTree = "<group>"; };
+		DD02B7C92747341C007F5569 /* ProtocolProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxy.m; sourceTree = "<group>"; };
+		DD02B7DB27473421007F5569 /* ProtocolProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxy.swift; sourceTree = "<group>"; };
 		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		DD438A452742CFD900F0A1F6 /* .remarkrc */ = {isa = PBXFileReference; explicitFileType = text.json; path = .remarkrc; sourceTree = "<group>"; };
+		DD438A462742D18A00F0A1F6 /* Plists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Plists; sourceTree = "<group>"; };
 		DD48BC94270E0DE800D842BC /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD48BC9F270E0F4500D842BC /* ProtocolProxyTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProtocolProxyTests.xctestplan; sourceTree = "<group>"; };
 		DD48BCA0270E0F9A00D842BC /* ProtocolProxy macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy macOS Tests.xctestplan"; sourceTree = "<group>"; };
 		DD48BCA1270E0FE200D842BC /* ProtocolProxy tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy tvOS Tests.xctestplan"; sourceTree = "<group>"; };
 		DD48BCA2270E101D00D842BC /* ProtocolProxy watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ProtocolProxy watchOS Tests.xctestplan"; sourceTree = "<group>"; };
-		DD5D044A261FA56400BA0FC2 /* ProtocolProxyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProtocolProxyTests-Info.plist"; path = "Plists/ProtocolProxyTests-Info.plist"; sourceTree = "<group>"; };
-		DD7E91982722ED120092BB79 /* ProtocolProxyTestsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxyTestsBase.h; sourceTree = "<group>"; };
-		DD7E91992722ED120092BB79 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyTestsBase.m; sourceTree = "<group>"; };
-		DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyBasicTests.swift; sourceTree = "<group>"; };
-		DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyTestsBase.swift; sourceTree = "<group>"; };
-		DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyObserverTests.swift; sourceTree = "<group>"; };
-		DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxyOverrideTests.swift; sourceTree = "<group>"; };
-		DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyOverrideTests.m; sourceTree = "<group>"; };
-		DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyObserverTests.m; sourceTree = "<group>"; };
-		DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxyBasicTests.m; sourceTree = "<group>"; };
-		DD7E91C72722ED200092BB79 /* ProtocolProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolProxy.h; sourceTree = "<group>"; };
-		DD7E91C82722ED200092BB79 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProtocolProxy+Internal.h"; sourceTree = "<group>"; };
-		DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProtocolProxy+Internal.m"; sourceTree = "<group>"; };
-		DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolProxy.m; sourceTree = "<group>"; };
-		DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolProxy.swift; sourceTree = "<group>"; };
 		DD86D53D23D11B3E0046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD86D54123D11B3E0046E63E /* ProtocolProxy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProtocolProxy-Info.plist"; path = "Plists/ProtocolProxy-Info.plist"; sourceTree = "<group>"; };
 		DD86D54623D11B3E0046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D57023D11C860046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D57823D11C860046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D58C23D11CA00046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D59423D11CA00046E63E /* ProtocolProxyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolProxyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D5C423D11D140046E63E /* ProtocolProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProtocolProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		DD86D5DF23D22DB90046E63E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
-		DD86D5E023D22DB90046E63E /* ProtocolProxy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ProtocolProxy.podspec; sourceTree = SOURCE_ROOT; };
-		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		DD86D5E323D22DC30046E63E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
+		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DD86D5DF23D22DB90046E63E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DD86D5E023D22DB90046E63E /* ProtocolProxy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = ProtocolProxy.podspec; sourceTree = "<group>"; };
+		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DD86D5E323D22DC30046E63E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		DDA42148273E153D00F2B0BC /* github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = github; path = .github; sourceTree = "<group>"; };
 		DDB1DE5C2405EEE300C20FED /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +254,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD02B794274733D0007F5569 /* ProtocolProxyTestsBase */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B795274733D0007F5569 /* include */,
+				DD02B798274733D0007F5569 /* src */,
+			);
+			path = ProtocolProxyTestsBase;
+			sourceTree = "<group>";
+		};
+		DD02B795274733D0007F5569 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B797274733D0007F5569 /* module.modulemap */,
+				DD02B796274733D0007F5569 /* ProtocolProxyTestsBase.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DD02B798274733D0007F5569 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B799274733D0007F5569 /* ProtocolProxyTestsBase.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DD02B79A274733D0007F5569 /* ProtocolProxyObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B79D274733D0007F5569 /* ProtocolProxyBasicTests.m */,
+				DD02B79C274733D0007F5569 /* ProtocolProxyObserverTests.m */,
+				DD02B79B274733D0007F5569 /* ProtocolProxyOverrideTests.m */,
+			);
+			path = ProtocolProxyObjCTests;
+			sourceTree = "<group>";
+		};
+		DD02B79E274733D0007F5569 /* ProtocolProxySwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B79F274733D0007F5569 /* ProtocolProxyBasicTests.swift */,
+				DD02B7A1274733D0007F5569 /* ProtocolProxyObserverTests.swift */,
+				DD02B7A2274733D0007F5569 /* ProtocolProxyOverrideTests.swift */,
+				DD02B7A0274733D0007F5569 /* ProtocolProxyTestsBase.swift */,
+			);
+			path = ProtocolProxySwiftTests;
+			sourceTree = "<group>";
+		};
+		DD02B7C32747341C007F5569 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B7C52747341C007F5569 /* module.modulemap */,
+				DD02B7C42747341C007F5569 /* ProtocolProxy.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DD02B7C62747341C007F5569 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B7C72747341C007F5569 /* ProtocolProxy+Internal.h */,
+				DD02B7C82747341C007F5569 /* ProtocolProxy+Internal.m */,
+				DD02B7C92747341C007F5569 /* ProtocolProxy.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DD02B7DA27473421007F5569 /* ProtocolProxySwift */ = {
+			isa = PBXGroup;
+			children = (
+				DD02B7DB27473421007F5569 /* ProtocolProxy.swift */,
+			);
+			path = ProtocolProxySwift;
+			sourceTree = "<group>";
+		};
 		DD48BC9E270E0F1300D842BC /* Test Plans */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,87 +339,13 @@
 			path = "Test Plans";
 			sourceTree = "<group>";
 		};
-		DD7E91962722ED120092BB79 /* ProtocolProxyTestsBase */ = {
+		DD5D04E52621361600BA0FC2 /* ProtocolProxy */ = {
 			isa = PBXGroup;
 			children = (
-				DD7E91972722ED120092BB79 /* include */,
-				DD7E919A2722ED120092BB79 /* src */,
-			);
-			path = ProtocolProxyTestsBase;
-			sourceTree = "<group>";
-		};
-		DD7E91972722ED120092BB79 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91982722ED120092BB79 /* ProtocolProxyTestsBase.h */,
-				DD7E91992722ED120092BB79 /* module.modulemap */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		DD7E919A2722ED120092BB79 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E919B2722ED120092BB79 /* ProtocolProxyTestsBase.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		DD7E919C2722ED120092BB79 /* ProtocolProxySwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E919D2722ED120092BB79 /* ProtocolProxyBasicTests.swift */,
-				DD7E919E2722ED120092BB79 /* ProtocolProxyTestsBase.swift */,
-				DD7E919F2722ED120092BB79 /* ProtocolProxyObserverTests.swift */,
-				DD7E91A02722ED120092BB79 /* ProtocolProxyOverrideTests.swift */,
-			);
-			path = ProtocolProxySwiftTests;
-			sourceTree = "<group>";
-		};
-		DD7E91A12722ED120092BB79 /* ProtocolProxyObjCTests */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91A22722ED120092BB79 /* ProtocolProxyOverrideTests.m */,
-				DD7E91A32722ED120092BB79 /* ProtocolProxyObserverTests.m */,
-				DD7E91A42722ED120092BB79 /* ProtocolProxyBasicTests.m */,
-			);
-			path = ProtocolProxyObjCTests;
-			sourceTree = "<group>";
-		};
-		DD7E91C52722ED200092BB79 /* ProtocolProxy */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91C62722ED200092BB79 /* include */,
-				DD7E91C92722ED200092BB79 /* src */,
+				DD02B7C32747341C007F5569 /* include */,
+				DD02B7C62747341C007F5569 /* src */,
 			);
 			path = ProtocolProxy;
-			sourceTree = "<group>";
-		};
-		DD7E91C62722ED200092BB79 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91C72722ED200092BB79 /* ProtocolProxy.h */,
-				DD7E91C82722ED200092BB79 /* module.modulemap */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		DD7E91C92722ED200092BB79 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91CA2722ED200092BB79 /* ProtocolProxy+Internal.h */,
-				DD7E91CB2722ED200092BB79 /* ProtocolProxy+Internal.m */,
-				DD7E91CC2722ED200092BB79 /* ProtocolProxy.m */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		DD7E91CD2722ED200092BB79 /* ProtocolProxySwift */ = {
-			isa = PBXGroup;
-			children = (
-				DD7E91CE2722ED200092BB79 /* ProtocolProxy.swift */,
-			);
-			path = ProtocolProxySwift;
 			sourceTree = "<group>";
 		};
 		DD86D53323D11B3E0046E63E = {
@@ -384,16 +384,16 @@
 		DD86D55B23D11BA80046E63E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD438A462742D18A00F0A1F6 /* Plists */,
+				DDA42148273E153D00F2B0BC /* github */,
 				DD17A9F9257744BC00D30599 /* scripts */,
-				DDA26DBD256EA4D700E1C6D7 /* workflows */,
 				DD86D5E023D22DB90046E63E /* ProtocolProxy.podspec */,
 				DD86D5DF23D22DB90046E63E /* Package.swift */,
 				DDB1DE5C2405EEE300C20FED /* codecov.yml */,
+				DD438A452742CFD900F0A1F6 /* .remarkrc */,
 				DD86D5E323D22DC30046E63E /* .swiftlint.yml */,
 				DD86D5E123D22DB90046E63E /* README.md */,
 				DD86D5DE23D22DB90046E63E /* LICENSE */,
-				DD86D54123D11B3E0046E63E /* ProtocolProxy-Info.plist */,
-				DD5D044A261FA56400BA0FC2 /* ProtocolProxyTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -401,8 +401,8 @@
 		DDB1DE252405EE5F00C20FED /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DD7E91C52722ED200092BB79 /* ProtocolProxy */,
-				DD7E91CD2722ED200092BB79 /* ProtocolProxySwift */,
+				DD5D04E52621361600BA0FC2 /* ProtocolProxy */,
+				DD02B7DA27473421007F5569 /* ProtocolProxySwift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -410,9 +410,9 @@
 		DDB1DE502405EE9900C20FED /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DD7E91A12722ED120092BB79 /* ProtocolProxyObjCTests */,
-				DD7E919C2722ED120092BB79 /* ProtocolProxySwiftTests */,
-				DD7E91962722ED120092BB79 /* ProtocolProxyTestsBase */,
+				DD02B79A274733D0007F5569 /* ProtocolProxyObjCTests */,
+				DD02B79E274733D0007F5569 /* ProtocolProxySwiftTests */,
+				DD02B794274733D0007F5569 /* ProtocolProxyTestsBase */,
 				DD48BC9E270E0F1300D842BC /* Test Plans */,
 			);
 			path = Tests;
@@ -425,8 +425,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91D32722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
-				DD7E91CF2722ED210092BB79 /* ProtocolProxy.h in Headers */,
+				DD02B7CE2747341C007F5569 /* ProtocolProxy+Internal.h in Headers */,
+				DD02B7CA2747341C007F5569 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +434,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91D42722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
-				DD7E91D02722ED210092BB79 /* ProtocolProxy.h in Headers */,
+				DD02B7CF2747341C007F5569 /* ProtocolProxy+Internal.h in Headers */,
+				DD02B7CB2747341C007F5569 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +443,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91D52722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
-				DD7E91D12722ED210092BB79 /* ProtocolProxy.h in Headers */,
+				DD02B7D02747341C007F5569 /* ProtocolProxy+Internal.h in Headers */,
+				DD02B7CC2747341C007F5569 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +452,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91D62722ED210092BB79 /* ProtocolProxy+Internal.h in Headers */,
-				DD7E91D22722ED210092BB79 /* ProtocolProxy.h in Headers */,
+				DD02B7D12747341C007F5569 /* ProtocolProxy+Internal.h in Headers */,
+				DD02B7CD2747341C007F5569 /* ProtocolProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,49 +614,49 @@
 		DD86D53423D11B3E0046E63E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
 					DD2FBC27258BE8BB00DB3211 = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD48BC93270E0DE800D842BC = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D53C23D11B3E0046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D54523D11B3E0046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D56423D11C4B0046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D56F23D11C860046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D57723D11C860046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D58B23D11CA00046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D59323D11CA00046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 					DD86D5C323D11D140046E63E = {
-						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1300;
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -763,7 +763,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh -configuration ${CONFIGURATION} -output \"${BUILD_DIR}/${CONFIGURATION}-universal/ProtocolProxy.xcframework\" \n";
+			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh --configuration ${CONFIGURATION} --output \"${BUILD_DIR}/${CONFIGURATION}-universal/ProtocolProxy.xcframework\" \n";
 		};
 		DD86D56823D11C550046E63E /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -781,7 +781,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if (echo \"$SKIP_SWIFTLINT\" | grep -iq \"^YES$\"); then\n    echo \"SKIP_SWIFTLINT=YES | Skipping SwiftLint\"\nelse\n    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -790,14 +790,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91B42722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
-				DD7E91B02722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
-				DD7E91A82722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
-				DD7E91C02722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
-				DD7E91B82722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DD7E91C42722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
-				DD7E91BC2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
-				DD7E91AC2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
+				DD02B7AA274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD02B7B2274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */,
+				DD02B7AE274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */,
+				DD02B7BA274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD02B7C2274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD02B7BE274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD02B7A6274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */,
+				DD02B7B6274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,9 +805,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91DB2722ED210092BB79 /* ProtocolProxy.m in Sources */,
-				DD7E91D72722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
-				DD7E91DF2722ED210092BB79 /* ProtocolProxy.swift in Sources */,
+				DD02B7D62747341C007F5569 /* ProtocolProxy.m in Sources */,
+				DD02B7D22747341C007F5569 /* ProtocolProxy+Internal.m in Sources */,
+				DD02B7DC27473421007F5569 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,14 +815,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91B12722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
-				DD7E91AD2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
-				DD7E91A52722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
-				DD7E91BD2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
-				DD7E91B52722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DD7E91C12722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
-				DD7E91B92722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
-				DD7E91A92722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
+				DD02B7A7274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD02B7AF274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */,
+				DD02B7AB274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */,
+				DD02B7B7274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD02B7BF274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD02B7BB274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD02B7A3274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */,
+				DD02B7B3274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,9 +830,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91DC2722ED210092BB79 /* ProtocolProxy.m in Sources */,
-				DD7E91D82722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
-				DD7E91E02722ED210092BB79 /* ProtocolProxy.swift in Sources */,
+				DD02B7D72747341C007F5569 /* ProtocolProxy.m in Sources */,
+				DD02B7D32747341C007F5569 /* ProtocolProxy+Internal.m in Sources */,
+				DD02B7DD27473421007F5569 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,14 +840,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91B22722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
-				DD7E91AE2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
-				DD7E91A62722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
-				DD7E91BE2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
-				DD7E91B62722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DD7E91C22722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
-				DD7E91BA2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
-				DD7E91AA2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
+				DD02B7A8274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD02B7B0274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */,
+				DD02B7AC274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */,
+				DD02B7B8274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD02B7C0274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD02B7BC274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD02B7A4274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */,
+				DD02B7B4274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,9 +855,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91DD2722ED210092BB79 /* ProtocolProxy.m in Sources */,
-				DD7E91D92722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
-				DD7E91E12722ED210092BB79 /* ProtocolProxy.swift in Sources */,
+				DD02B7D82747341C007F5569 /* ProtocolProxy.m in Sources */,
+				DD02B7D42747341C007F5569 /* ProtocolProxy+Internal.m in Sources */,
+				DD02B7DE27473421007F5569 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,14 +865,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91B32722ED120092BB79 /* ProtocolProxyObserverTests.swift in Sources */,
-				DD7E91AF2722ED120092BB79 /* ProtocolProxyTestsBase.swift in Sources */,
-				DD7E91A72722ED120092BB79 /* ProtocolProxyTestsBase.m in Sources */,
-				DD7E91BF2722ED120092BB79 /* ProtocolProxyObserverTests.m in Sources */,
-				DD7E91B72722ED120092BB79 /* ProtocolProxyOverrideTests.swift in Sources */,
-				DD7E91C32722ED120092BB79 /* ProtocolProxyBasicTests.m in Sources */,
-				DD7E91BB2722ED120092BB79 /* ProtocolProxyOverrideTests.m in Sources */,
-				DD7E91AB2722ED120092BB79 /* ProtocolProxyBasicTests.swift in Sources */,
+				DD02B7A9274733D0007F5569 /* ProtocolProxyOverrideTests.m in Sources */,
+				DD02B7B1274733D0007F5569 /* ProtocolProxyBasicTests.m in Sources */,
+				DD02B7AD274733D0007F5569 /* ProtocolProxyObserverTests.m in Sources */,
+				DD02B7B9274733D0007F5569 /* ProtocolProxyTestsBase.swift in Sources */,
+				DD02B7C1274733D0007F5569 /* ProtocolProxyOverrideTests.swift in Sources */,
+				DD02B7BD274733D0007F5569 /* ProtocolProxyObserverTests.swift in Sources */,
+				DD02B7A5274733D0007F5569 /* ProtocolProxyTestsBase.m in Sources */,
+				DD02B7B5274733D0007F5569 /* ProtocolProxyBasicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,9 +880,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD7E91DE2722ED210092BB79 /* ProtocolProxy.m in Sources */,
-				DD7E91DA2722ED210092BB79 /* ProtocolProxy+Internal.m in Sources */,
-				DD7E91E22722ED210092BB79 /* ProtocolProxy.swift in Sources */,
+				DD02B7D92747341C007F5569 /* ProtocolProxy.m in Sources */,
+				DD02B7D52747341C007F5569 /* ProtocolProxy+Internal.m in Sources */,
+				DD02B7DF27473421007F5569 /* ProtocolProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,14 +980,14 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = Tests/ProtocolProxyTestsBase/include;
-				INFOPLIST_FILE = "Plists/TestProjectTests-Info.plist";
+				INFOPLIST_FILE = "Plists/ProtocolProxyTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.testprojecttests;
-				PRODUCT_NAME = TestProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.protocolproxytests;
+				PRODUCT_NAME = ProtocolProxyTests;
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_INCLUDE_PATHS = Tests/ProtocolProxyTestsBase/include;
@@ -1058,7 +1058,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -1120,7 +1120,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

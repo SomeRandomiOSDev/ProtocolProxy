@@ -15,12 +15,15 @@ EXIT_MESSAGE=""
 
 # Help
 
-function print_help() {
-    local HELP="workflowtests.sh [--help | -h] [--project-name <project_name>]\n"
-    HELP+="                 [--no-clean | --no-clean-on-fail]\n"
-    HELP+="                 [--is-running-in-temp-env]\n"
+function printhelp() {
+    local HELP="Run tests for the Github Action workflows.\n"
+    HELP+="\n"
+    HELP+="workflowtests.sh [--help | -h] [--verbose] [--project-name <project_name>]\n"
+    HELP+="                 [--no-clean | --no-clean-on-fail] [--is-running-in-temp-env]\n"
     HELP+="\n"
     HELP+="--help, -h)               Print this help message and exit.\n"
+    HELP+="\n"
+    HELP+="--help, -h)               Enable verbose logging.\n"
     HELP+="\n"
     HELP+="--project-name)           The name of the project to run tests against. If not\n"
     HELP+="                          provided it will attempt to be resolved by searching\n"
@@ -35,6 +38,7 @@ function print_help() {
     HELP+="                          succeed clean up will continue as normal. This is\n"
     HELP+="                          mutually exclusive with --no-clean with --no-clean\n"
     HELP+="                          taking precedence.\n"
+    HELP+="\n"
     HELP+="--is-running-in-temp-env) Setting this flag tells this script that the\n"
     HELP+="                          environment (directory) in which it is running is a\n"
     HELP+="                          temporary environment and it need not worry about\n"
@@ -47,10 +51,10 @@ function print_help() {
     HELP+="                          have finished running."
 
     IFS='%'
-    echo -e $HELP
+    echo -e "$HELP" 1>&2
     unset IFS
 
-    exit 0
+    exit $EXIT_CODE
 }
 
 # Parse Arguments
@@ -78,33 +82,22 @@ while [[ $# -gt 0 ]]; do
         shift # --no-clean-on-fail
         ;;
 
+        --verbose)
+        VERBOSE=1
+        shift # --verbose
+        ;;
+
         --help | -h)
-        print_help
+        printhelp
         ;;
 
         *)
-        echo "Unknown argument: $1"
-        print_help
+        "$SCRIPTS_DIR/printformat.sh" "foreground:red" "Unknown argument: $1\n" 1>&2
+        EXIT_CODE=1
+        printhelp
+        ;;
     esac
 done
-
-if [ -z ${PROJECT_NAME+x} ]; then
-    PROJECTS=$(ls "$ROOT_DIR" | grep \.xcodeproj$)
-
-    if [ "${#PROJECTS[@]}" == "0" ]; then
-        echo "No Xcode projects found in root directory. Try specifying a project name:"
-        print_help
-    elif [ "${#PROJECTS[@]}" == "1" ]; then
-        PROJECT_NAME="${PROJECTS[0]}"
-        PROJECT_NAME="${PROJECT_NAME%.*}"
-    else
-        echo "More than 1 Xcode projects found in root directory. Specify which project to run tests against:"
-        print_help
-    fi
-elif [ ! -e "$ROOT_DIR/$PROJECT_NAME.xcodeproj" ]; then
-    echo "Unable to locate Xcode project to run tests against: $ROOT_DIR/$PROJECT_NAME.xcodeproj"
-    print_help
-fi
 
 if [ -z ${IS_RUNNING_IN_TEMP_ENV+x} ]; then
     IS_RUNNING_IN_TEMP_ENV=0
@@ -147,8 +140,12 @@ function cleanup() {
 
     #
 
-    if [ ${#EXIT_MESSAGE} -gt 0 ]; then
-        echo -e "$EXIT_MESSAGE"
+    if [ "${#EXIT_MESSAGE}" != 0 ]; then
+        if [ "$EXIT_MESSAGE" == "**printhelp**" ]; then
+            printhelp
+        else
+            echo -e "$EXIT_MESSAGE" 1>&2
+        fi
     fi
 
     exit $EXIT_CODE
@@ -156,20 +153,25 @@ function cleanup() {
 
 function checkresult() {
     if [ "$1" != "0" ]; then
-        EXIT_MESSAGE="\033[31m$2\033[0m"
-        EXIT_CODE=$1
+        if [ "${#2}" != "0" ]; then
+            EXIT_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:red" "$2")"
+        else
+            EXIT_MESSAGE="**printhelp**"
+        fi
 
+        EXIT_CODE=$1
         cleanup
     fi
 }
 
 function printstep() {
-    echo -e "\033[32m$1\033[0m"
+    "$SCRIPTS_DIR/printformat.sh" "foreground:green" "$1"
 }
 
 function setuptemp() {
-    local TEMP_DIR="$(mktemp -d)"
-    local TEMP_NAME="$(basename "$(mktemp -u "$TEMP_DIR/${PROJECT_NAME}Tests_XXXXXX")")"
+    TEMP_DIR="$(mktemp -d)"
+
+    local TEMP_NAME="$(basename "$(mktemp -u "$TEMP_DIR/${PROJECT_NAME}WorkflowTests_XXXXXXXX")")"
     local OUTPUT_DIR="$TEMP_DIR/$TEMP_NAME"
 
     cp -R "$ROOT_DIR" "$OUTPUT_DIR"
@@ -181,16 +183,71 @@ function setuptemp() {
     if [ -e "$OUTPUT_DIR/.swiftpm" ]; then
         rm -rf "$OUTPUT_DIR/.swiftpm"
     fi
+    if [ -e "$OUTPUT_DIR/.xcodebuild" ]; then
+        rm -rf "$OUTPUT_DIR/.xcodebuild"
+    fi
 
     echo "$OUTPUT_DIR"
 }
 
+function createlogfile() {
+    if [ ! -d "$OUTPUT_DIR/Logs" ]; then
+        mkdir -p "$OUTPUT_DIR/Logs"
+    fi
+
+    local LOG="$OUTPUT_DIR/Logs/$1.log"
+    touch "$LOG"
+
+    echo "$LOG"
+}
+
+function errormessage() {
+    local ERROR_MESSAGE="$1"
+
+    if [[ "$NO_CLEAN" == "1" ]] || [[ "$NO_CLEAN_ON_FAIL" == "1" ]]; then
+        ERROR_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:default" "${1%.}. See log for more details: $("$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "$2")")"
+    elif [ "$VERBOSE" != "1" ]; then
+        ERROR_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:default" "${1%.}. Use the '--no-clean' or '--no-clean-on-fail' flag to inspect the logs.")"
+    fi
+
+    echo "$ERROR_MESSAGE"
+}
+
+function interrupt() {
+    EXIT_CODE=$SIGINT
+    EXIT_MESSAGE="$("$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "Tests run was interrupted..")"
+
+    cleanup
+}
+
 # Setup
+
+trap interrupt SIGINT # Cleanup if the user aborts (Ctrl + C)
+
+#
+
+ARGUMENTS=()
+if [ "${#PROJECT_NAME}" != 0 ]; then
+    ARGUMENTS=(--project-name "$PROJECT_NAME")
+fi
+
+PROJECT_NAME="$("$SCRIPTS_DIR/findproject.sh" "${ARGUMENTS[@]}")"
+checkresult $?
+
+#
+
+VERBOSE_FLAGS=()
+if [ "$VERBOSE" == "1" ]; then
+    VERBOSE_FLAGS=(--verbose)
+fi
+
+#
 
 if [ "$IS_RUNNING_IN_TEMP_ENV" == "1" ]; then
     OUTPUT_DIR="$ROOT_DIR"
 else
     OUTPUT_DIR="$(setuptemp)"
+    echo -e "Testing from Temporary Directory: $("$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "$OUTPUT_DIR")"
 fi
 
 # Check For Dependencies
@@ -207,10 +264,10 @@ if which carthage >/dev/null; then
     "$SCRIPTS_DIR/versions.sh" "$CARTHAGE_VERSION" "0.37.0"
 
     if [ $? -lt 0 ]; then
-        echo -e "\033[33mCarthage version of at least 0.37.0 is recommended for running these unit tests\033[0m"
+        "$SCRIPTS_DIR/printformat.sh" "foreground:yellow" "Carthage version of at least 0.37.0 is recommended for running these unit tests"
     fi
 else
-    checkresult -1 "Carthage is not installed and is required for running unit tests: \033[4;34mhttps://github.com/Carthage/Carthage#installing-carthage"
+    checkresult -1 "Carthage is not installed and is required for running unit tests: $("$SCRIPTS_DIR/printformat.sh" "foreground:blue;underline" "https://github.com/Carthage/Carthage#installing-carthage")"
 fi
 
 ### CocoaPods
@@ -220,31 +277,39 @@ if which pod >/dev/null; then
     "$SCRIPTS_DIR/versions.sh" "$PODS_VERSION" "1.7.3"
 
     if [ $? -ge 0 ]; then
-        echo "CocoaPods: $(pod --version)"
+        echo "CocoaPods: $PODS_VERSION"
     else
-        checkresult -1 "These unit tests require version 1.7.3 or later of CocoaPods: \033[4;34mhttps://guides.cocoapods.org/using/getting-started.html#updating-cocoapods"
+        checkresult -1 "These unit tests require version 1.7.3 or later of CocoaPods: $("$SCRIPTS_DIR/printformat.sh" "foreground:blue;underline" "https://guides.cocoapods.org/using/getting-started.html#updating-cocoapods")"
     fi
 else
-    checkresult -1 "CocoaPods is not installed and is required for running unit tests: \033[4;34mhttps://guides.cocoapods.org/using/getting-started.html#installation"
+    checkresult -1 "CocoaPods is not installed and is required for running unit tests: $("$SCRIPTS_DIR/printformat.sh" "foreground:blue;underline" "https://guides.cocoapods.org/using/getting-started.html#installation")"
+fi
+
+### SwiftLint
+
+if which swiftlint >/dev/null; then
+    echo "SwiftLint: $(swiftlint --version)"
+else
+    checkresult -1 "SwiftLint is not installed and is required for running unit tests: $("$SCRIPTS_DIR/printformat.sh" "foreground:blue;underline" "https://github.com/realm/SwiftLint#installation")"
 fi
 
 # Run Tests
 
-printstep "Running Tests..."
+printstep "Running Tests...\n"
 
 ### Carthage Workflow
 
 printstep "Testing 'carthage.yml' Workflow..."
 
-git add .
-git commit -m "Commit" --no-gpg-sign
-git tag | xargs git tag -d
-git tag --no-sign 1.0
+git add . >/dev/null 2>&1
+git commit -m "Commit" --no-gpg-sign >/dev/null 2>&1
+git tag | xargs git tag -d >/dev/null 2>&1
+git tag --no-sign 1.0 >/dev/null 2>&1
 checkresult $? "'Create Cartfile' step of 'carthage.yml' workflow failed."
 
 echo "git \"file://$OUTPUT_DIR\"" > ./Cartfile
 
-./scripts/carthage.sh update
+./scripts/carthage.sh update "${VERBOSE_FLAGS[@]}"
 checkresult $? "'Build' step of 'carthage.yml' workflow failed."
 
 printstep "'carthage.yml' Workflow Tests Passed\n"
@@ -253,11 +318,11 @@ printstep "'carthage.yml' Workflow Tests Passed\n"
 
 printstep "Testing 'cocoapods.yml' Workflow..."
 
-pod lib lint
-checkresult $? "'Lint (Dynamic Library)' step of 'cocoapods.yml' workflow failed."
+pod lib lint "${VERBOSE_FLAGS[@]}"
+checkresult $? "'Lint (Dynamic)' step of 'cocoapods.yml' workflow failed."
 
-pod lib lint --use-libraries
-checkresult $? "'Lint (Static Library)' step of 'cocoapods.yml' workflow failed."
+pod lib lint --use-libraries "${VERBOSE_FLAGS[@]}"
+checkresult $? "'Lint (Static)' step of 'cocoapods.yml' workflow failed."
 
 printstep "'cocoapods.yml' Workflow Tests Passed\n"
 
@@ -265,22 +330,49 @@ printstep "'cocoapods.yml' Workflow Tests Passed\n"
 
 printstep "Testing 'swift-package.yml' Workflow..."
 
-swift build -v
-checkresult $? "'Build' step of 'swift-package.yml' workflow failed."
+if [ "$VERBOSE" == "1" ]; then
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Building Swift Package from $("$SCRIPTS_DIR/printformat.sh" "bold" "Package.swift")"
+    swift build "${VERBOSE_FLAGS[@]}"
+    checkresult $? "'Build' step of 'swift-package.yml' workflow failed."
 
-swift test -v --enable-code-coverage
-checkresult $? "'Test' step of 'swift-package.yml' workflow failed."
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Testing Swift Package from $("$SCRIPTS_DIR/printformat.sh" "bold" "Package.swift")"
+    swift test --enable-code-coverage "${VERBOSE_FLAGS[@]}"
+    checkresult $? "'Test' step of 'swift-package.yml' workflow failed."
+else
+    LOG="$(createlogfile "build-swiftpackage")"
+
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Building Swift Package from $("$SCRIPTS_DIR/printformat.sh" "bold" "Package.swift")"
+    swift build > "$LOG" 2>&1
+    checkresult $? "$(errormessage "'Build' step of 'swift-package.yml' workflow failed." "$LOG")"
+
+    #
+
+    LOG="$(createlogfile "test-swiftpackage")"
+
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Testing Swift Package from $("$SCRIPTS_DIR/printformat.sh" "bold" "Package.swift")"
+    swift test --enable-code-coverage > "$LOG" 2>&1
+    checkresult $? "$(errormessage "'Test' step of 'swift-package.yml' workflow failed." "$LOG")"
+fi
 
 xcrun llvm-cov export --format=lcov --instr-profile=".build/debug/codecov/default.profdata" ".build/debug/${PROJECT_NAME}PackageTests.xctest/Contents/MacOS/${PROJECT_NAME}PackageTests" > "./codecov.lcov"
 checkresult $? "'Generate Code Coverage File' step of 'swift-package.yml' workflow failed."
 
 printstep "'swift-package.yml' Workflow Tests Passed\n"
 
+### SwiftLint Workflow
+
+printstep "Testing 'swiftlint.yml' Workflow..."
+
+swiftlint
+checkresult $? "'Run SwiftLint' step of 'swiftlint.yml' workflow failed."
+
+printstep "'swiftlint.yml' Workflow Tests Passed\n"
+
 ### XCFramework Workflow
 
 printstep "Testing 'xcframework.yml' Workflow..."
 
-./scripts/xcframework.sh -output "./$PROJECT_NAME.xcframework"
+./scripts/xcframework.sh --project-name "$PROJECT_NAME" --output "$OUTPUT_DIR" "${VERBOSE_FLAGS[@]}" -- SKIP_SWIFTLINT=YES
 checkresult $? "'Build' step of 'xcframework.yml' workflow failed."
 
 printstep "'xcframework.yml' Workflow Tests Passed\n"
@@ -289,11 +381,13 @@ printstep "'xcframework.yml' Workflow Tests Passed\n"
 
 printstep "Testing 'upload-assets.yml' Workflow..."
 
-zip -rX "$PROJECT_NAME.xcframework.zip" "$PROJECT_NAME.xcframework"
-checkresult $? "'Create Zip' step of 'upload-assets.yml' workflow failed."
+echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Creating zip archive for $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcframework")"
+zip -rX "$PROJECT_NAME.xcframework.zip" "$PROJECT_NAME.xcframework" >/dev/null 2>&1
+checkresult $? "'Create XCFramework Zip' step of 'upload-assets.yml' workflow failed."
 
-tar -zcvf "$PROJECT_NAME.xcframework.tar.gz" "$PROJECT_NAME.xcframework"
-checkresult $? "'Create Tar' step of 'upload-assets.yml' workflow failed."
+echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Creating tar archive for $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcframework")"
+tar -zcvf "$PROJECT_NAME.xcframework.tar.gz" "$PROJECT_NAME.xcframework" >/dev/null 2>&1
+checkresult $? "'Create XCFramework Tar' step of 'upload-assets.yml' workflow failed."
 
 printstep "'upload-assets.yml' Workflow Tests Passed\n"
 
@@ -301,79 +395,141 @@ printstep "'upload-assets.yml' Workflow Tests Passed\n"
 
 printstep "Testing 'xcodebuild.yml' Workflow..."
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME" -destination "generic/platform=iOS" -configuration Debug
-checkresult $? "'Build iOS' step of 'xcodebuild.yml' workflow failed."
+#
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME" -destination "generic/platform=iOS Simulator" -configuration Debug
-checkresult $? "'Build iOS Simulator' step of 'xcodebuild.yml' workflow failed."
+for PLATFORM in "iOS" "iOS Simulator" "Mac Catalyst" "macOS" "tvOS" "tvOS Simulator" "watchOS" "watchOS Simulator"; do
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Building $("$SCRIPTS_DIR/printformat.sh" "foreground:green" "$PLATFORM") in $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcodeproj")"
+
+    SCHEME="${PROJECT_NAME}"
+    DESTINATION="$PLATFORM"
+
+    case "$PLATFORM" in
+        "Mac Catalyst") DESTINATION="macOS,variant=Mac Catalyst" ;;
+        "macOS") SCHEME="${PROJECT_NAME} macOS" ;;
+
+        "tvOS") SCHEME="${PROJECT_NAME} tvOS" ;;
+        "tvOS Simulator") SCHEME="${PROJECT_NAME} tvOS" ;;
+
+        "watchOS") SCHEME="${PROJECT_NAME} watchOS" ;;
+        "watchOS Simulator") SCHEME="${PROJECT_NAME} watchOS" ;;
+    esac
+
+    #
+
+    ERROR_MESSAGE="'Build $PLATFORM' step of 'xcodebuild.yml' workflow failed."
+
+    if [ "$VERBOSE" == "1" ]; then
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES
+    else
+        LOG="$(createlogfile "$(echo "$PLATFORM" | tr -d ' ' | tr '[:upper:]' '[:lower:]')-build")"
+        ERROR_MESSAGE="$(errormessage "$ERROR_MESSAGE" "$LOG")"
+
+        #
+
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -destination "generic/platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES > "$LOG" 2>&1
+    fi
+
+    checkresult $? "$ERROR_MESSAGE"
+done
+
+echo ""
+
+#
 
 IOS_SIM="$(xcrun simctl list devices available | grep "iPhone [0-9]" | sort -rV | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME" -testPlan "${PROJECT_NAME}Tests" -destination "platform=iOS Simulator,name=$IOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "'Test iOS' step of 'xcodebuild.yml' workflow failed."
-
-###
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME" -destination "generic/platform=macOS,variant=Mac Catalyst" -configuration Debug
-checkresult $? "'Build MacCatalyst' step of 'xcodebuild.yml' workflow failed."
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME" -testPlan "${PROJECT_NAME}Tests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "'Test MacCatalyst' step of 'xcodebuild.yml' workflow failed."
-
-###
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME macOS" -destination "generic/platform=macOS" -configuration Debug
-checkresult $? "'Build macOS' step of 'xcodebuild.yml' workflow failed."
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME macOS" -testPlan "$PROJECT_NAME macOS Tests" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "'Test macOS' step of 'xcodebuild.yml' workflow failed."
-
-###
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME tvOS" -destination "generic/platform=tvOS" -configuration Debug
-checkresult $? "'Build tvOS' step of 'xcodebuild.yml' workflow failed."
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME tvOS" -destination "generic/platform=tvOS Simulator" -configuration Debug
-checkresult $? "'Build tvOS Simulator' step of 'xcodebuild.yml' workflow failed."
-
 TVOS_SIM="$(xcrun simctl list devices available | grep "Apple TV" | sort -V | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME tvOS" -testPlan "$PROJECT_NAME tvOS Tests" -destination "platform=tvOS Simulator,name=$TVOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "'Test tvOS' step of 'xcodebuild.yml' workflow failed."
-
-###
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME watchOS" -destination "generic/platform=watchOS" -configuration Debug
-checkresult $? "'Build watchOS' step of 'xcodebuild.yml' workflow failed."
-
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME watchOS" -destination "generic/platform=watchOS Simulator" -configuration Debug
-checkresult $? "'Build watchOS Simulator' step of 'xcodebuild.yml' workflow failed."
-
 WATCHOS_SIM="$(xcrun simctl list devices available | grep "Apple Watch" | sort -rV | head -n 1 | sed -E 's/(.+)[ ]*\([^)]*\)[ ]*\([^)]*\)/\1/' | awk '{$1=$1};1')"
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME watchOS" -testPlan "$PROJECT_NAME watchOS Tests" -destination "platform=watchOS Simulator,name=$WATCHOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "'Test watchOS' step of 'xcodebuild.yml' workflow failed."
+#
+
+for PLATFORM in "iOS" "Mac Catalyst" "macOS" "tvOS" "watchOS"; do
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Testing $("$SCRIPTS_DIR/printformat.sh" "foreground:green" "$PLATFORM") in $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcodeproj")"
+
+    SCHEME="${PROJECT_NAME}"
+    TESTPLAN="${PROJECT_NAME}Tests"
+    DESTINATION="$PLATFORM"
+
+    case "$PLATFORM" in
+        "iOS") DESTINATION="iOS Simulator,name=$IOS_SIM" ;;
+        "Mac Catalyst") DESTINATION="macOS,variant=Mac Catalyst" ;;
+
+        "macOS")
+        SCHEME="$PROJECT_NAME macOS"
+        TESTPLAN="$PROJECT_NAME macOS Tests"
+        ;;
+
+        "tvOS")
+        SCHEME="$PROJECT_NAME tvOS"
+        TESTPLAN="$PROJECT_NAME tvOS Tests"
+        DESTINATION="tvOS Simulator,name=$TVOS_SIM"
+        ;;
+
+        "watchOS")
+        SCHEME="$PROJECT_NAME watchOS"
+        TESTPLAN="$PROJECT_NAME watchOS Tests"
+        DESTINATION="watchOS Simulator,name=$WATCHOS_SIM"
+        ;;
+    esac
+
+    #
+
+    ERROR_MESSAGE="'Test $PLATFORM' step of 'xcodebuild.yml' workflow failed."
+
+    if [ "$VERBOSE" == "1" ]; then
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -testPlan "$TESTPLAN" -destination "platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES ONLY_ACTIVE_ARCH=YES test
+    else
+        LOG="$(createlogfile "$(echo "$PLATFORM" | tr -d ' ' | tr '[:upper:]' '[:lower:]')-test")"
+        ERROR_MESSAGE="$(errormessage "$ERROR_MESSAGE" "$LOG")"
+
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -testPlan "$TESTPLAN" -destination "platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES ONLY_ACTIVE_ARCH=YES test > "$LOG" 2>&1
+    fi
+
+    checkresult $? "$ERROR_MESSAGE"
+done
 
 printstep "'xcodebuild.yml' Workflow Tests Passed\n"
 
 ### Test Schemes
 
-printstep "Testing running unit tests with test schemes..."
+printstep "Test running unit tests with test schemes..."
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "${PROJECT_NAME}Tests" -testPlan "${PROJECT_NAME}Tests" -destination "platform=iOS Simulator,name=$IOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "Test iOS (Test Scheme) failed."
+for PLATFORM in "iOS" "Mac Catalyst" "macOS" "tvOS" "watchOS"; do
+    echo -e "$("$SCRIPTS_DIR/printformat.sh" "foreground:blue" "***") Testing $("$SCRIPTS_DIR/printformat.sh" "foreground:green" "$PLATFORM") in $("$SCRIPTS_DIR/printformat.sh" "bold" "$PROJECT_NAME.xcodeproj")"
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "${PROJECT_NAME}Tests" -testPlan "${PROJECT_NAME}Tests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "Test MacCatalyst (Test Scheme) failed."
+    SCHEME="${PROJECT_NAME}Tests"
+    DESTINATION="$PLATFORM"
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME macOS Tests" -testPlan "$PROJECT_NAME macOS Tests" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "Test macOS (Test Scheme) failed."
+    case "$PLATFORM" in
+        "iOS") DESTINATION="iOS Simulator,name=$IOS_SIM" ;;
+        "Mac Catalyst") DESTINATION="macOS,variant=Mac Catalyst" ;;
+        "macOS") SCHEME="$PROJECT_NAME macOS Tests" ;;
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME tvOS Tests" -testPlan "$PROJECT_NAME tvOS Tests" -destination "platform=tvOS Simulator,name=$TVOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "Test tvOS (Test Scheme) failed."
+        "tvOS")
+        SCHEME="$PROJECT_NAME tvOS Tests"
+        DESTINATION="tvOS Simulator,name=$TVOS_SIM"
+        ;;
 
-xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$PROJECT_NAME watchOS Tests" -testPlan "$PROJECT_NAME watchOS Tests" -destination "platform=watchOS Simulator,name=$WATCHOS_SIM" -configuration Debug ONLY_ACTIVE_ARCH=YES test
-checkresult $? "Test watchOS (Test Scheme) failed."
+        "watchOS")
+        SCHEME="$PROJECT_NAME watchOS Tests"
+        DESTINATION="watchOS Simulator,name=$WATCHOS_SIM"
+        ;;
+    esac
+
+    #
+
+    ERROR_MESSAGE="Test $PLATFORM (Test Scheme) failed."
+
+    if [ "$VERBOSE" == "1" ]; then
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -testPlan "$SCHEME" -destination "platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES ONLY_ACTIVE_ARCH=YES test
+    else
+        LOG="$(createlogfile "$(echo "$PLATFORM" | tr -d ' ' | tr '[:upper:]' '[:lower:]')-test")"
+        ERROR_MESSAGE="$(errormessage "$ERROR_MESSAGE" "$LOG")"
+
+        xcodebuild -project "$PROJECT_NAME.xcodeproj" -scheme "$SCHEME" -testPlan "$SCHEME" -destination "platform=$DESTINATION" -configuration Debug SKIP_SWIFTLINT=YES ONLY_ACTIVE_ARCH=YES test > "$LOG" 2>&1
+    fi
+
+    checkresult $? "$ERROR_MESSAGE"
+done
 
 printstep "Test Scheme Unit Tests Passed\n"
 
